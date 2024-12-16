@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/template/css/disclaimer.css">
+    <link rel="stylesheet" href="/public/template/css/styles.css">
+    <title>Effet Doppler</title>
+</head>
+<body>
+
+    <main class="main-div" id="main-div">
+
+        <div class="main-text" id="main_text">
+            <h1 id="text-h1">Bonjour / Bonsoir et bienvenue<br/>[NOM D'UTILISATEUR]</h1>
+            <p id="text-p">Vous allez participer à un projet interactif. En raison de la différence de charge de travail, cette page nous permet de vous signifier que tout ce que vous verrez sur le projet qui suit n'est en aucun cas une vidéo diffusée sur un site web mais que tout a été pensé et programmé. Par exemple, le fond est actuellement plusieurs couches d'images interagissant avec le mouvement de la souris, essayez pour voir !</p>
+        </div>
+        
+        <!-- <div class="space" id="space">
+            <img src="/public/images/png/png-space_03.png" alt="space-img" id="space-img">
+        </div>
+
+        <div class="doppler" id="doppler">
+            <img src="/public/images/png/png-sound.png" alt="sound-img" id="sound-img">
+        </div>
+
+        <div class="main-title-next" id="main-title">        
+            <h2>Effet Doppler</h2>
+        </div> -->
+    </main>
+
+    <div class="background-images">
+        <img src="/public/images/png/bg/01.png" alt="bg" class="object" value="5">
+        <img src="/public/images/png/bg/02.png" alt="bg" class="object" value="5">
+        <img src="/public/images/png/bg/03.png" alt="bg" class="object" value="-5">
+        <img src="/public/images/png/bg/04.png" alt="bg" class="object" value="5">
+        <img src="/public/images/png/bg/05.png" alt="bg" class="object" value="-5">
+    </div>
+
+    <button onclick="continueBtn()" id="continue-btn"><span id="btn-span">Continuer</span></button>
+    
+    <script src="/public/template/js/background.js"></script>
+    <script src="/public/template/js/disclaimer.js"></script>
+</body>
+</html>

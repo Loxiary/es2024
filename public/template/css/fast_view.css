@@ -1,0 +1,440 @@
+/* ------------------------- MAIN ------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --base-clr: #11121a;
+    --line-clr: #42434a;
+    --hover-clr: #222533;
+    --text-clr: #e6e6ef;
+    --accent-clr: #5e63ff;
+    --secondary-text-clr: #b0b3c1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+    font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5rem;
+}
+
+body{
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: var(--base-clr);
+    color: var(--text-clr);
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+svg{
+    flex-shrink: 0;
+    fill: var(--text-clr);
+}
+
+
+@media(max-width: 800px){
+    body{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --------------------------------------------------- SIDEBAR --------------------------------------------------- */
+
+#sidebar{
+    position: sticky;
+    top: 0;
+    align-self: start;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 300px;
+    padding: 5px 1em;
+    background-color: var(--base-clr);
+    border-right: 1px solid var(--line-clr);
+    transition: 200ms ease-in-out;
+    overflow: hidden;
+    text-wrap: nowrap;
+}
+
+#sidebar.close{
+    padding: 5px;
+    width: 60px;
+}
+
+#sidebar ul {
+    list-style: none;
+}
+
+#sidebar > ul > li:first-child{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+    .logo{
+        font-weight: 600;
+    }
+}
+
+#sidebar ul li.active a{
+    color: var(--accent-clr);
+
+    svg{
+        fill: var(--accent-clr);
+    }
+}
+
+#sidebar a, #sidebar .dropdown-btn, #sidebar .logo{
+    border-radius: .5em;
+    padding: .85em;
+    text-decoration: none;
+    color: var(--text-clr);
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    text-wrap: wrap;
+}
+
+.dropdown-btn{
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+#sidebar svg{
+    flex-shrink: 0;
+    fill: var(--text-clr);
+}
+
+#sidebar a span, #sidebar .dropdown-btn span{
+    flex-grow: 1;
+}
+
+#sidebar a:hover, #sidebar .dropdown-btn:hover{
+    background-color: var(--hover-clr);
+    cursor: pointer;
+}
+
+#sidebar .sub-menu{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 300ms ease-in-out;
+
+    > div{
+        overflow: hidden;
+    }
+}
+
+#sidebar .sub-menu.show{
+    grid-template-rows: 1fr;
+}
+
+.dropdown-btn svg{
+    transition: 100ms ease-in-out;
+}
+
+.rotate svg:last-child{
+    rotate: 180deg
+}
+
+#sidebar .sub-menu a{
+    padding-left: 2em;
+}
+
+#toggle-btn{
+    margin-left: auto;
+    padding: 1em;
+    border: none;
+    border-radius: .5em;
+    background: none;
+    cursor: pointer;
+
+    svg{
+        transition: rotate 150ms ease-in-out;
+    }
+}
+
+#toggle-btn:hover{
+    background-color: var(--hover-clr);
+}
+
+/* --------------------------------------------------- SIDEBAR END --------------------------------------------------- */
+
+@media(max-width: 800px){
+    #sidebar{
+        height: 60px;
+        width: 100%;
+        border-right: none;
+        border-top: 1px solid var(--line-clr);
+        padding: 0;
+        position: fixed;
+        top: unset;
+        bottom: 0;
+
+    > ul {
+        padding: 0;
+        display: grid;
+        grid-auto-columns: 60px;
+        grid-auto-flow: column;
+        align-items: center;
+        overflow-x: scroll;
+    }
+
+    ul li{
+        height: 100%;
+    }
+
+    ul a, ul .dropdown-btn{
+        width: 60px;
+        height: 60px;
+        padding: 0;
+        border-radius: 0;
+        justify-content: center;
+    }
+
+    ul li span, ul li:first-child, .dropdown-btn svg:last-child{
+        display: none;
+    }
+
+    ul li .sub-menu.show{
+        position: fixed;
+        bottom: 60px;
+        left: 0;
+        box-sizing: border-box;
+        height: 60px;
+        width: 100%;
+        background-color: var(--hover-clr);
+        border-top: 1px solid var(--line-clr);
+        display: flex;
+        justify-content: center;
+  
+        > div{
+          overflow-x: auto;
+        }
+        
+        li{
+          display: inline-flex;
+        }
+
+        a{
+          box-sizing: border-box;
+          padding: 1em;
+          width: auto;
+          justify-content: center;
+        }
+    }
+    }
+}
+
+/* ------------------------------- DASHBOARD ------------------------------- */
+
+/* --------------------------------------------------- NAVBAR --------------------------------------------------- */
+
+#navbar{
+    overflow: hidden;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-bottom: 1px var(--line-clr) solid;
+}
+
+.container-nav{
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    h2, h3, p { margin: auto 50px; } 
+    h3{ margin: auto 0 auto 20px; } 
+    
+}
+
+.logo-dashboard{
+    height: 75px;
+    width: 75px;
+    margin: auto 0 auto 20px;
+}
+
+.search-div{
+    display: inline-flex;
+    margin: auto 2vw auto auto;
+}
+
+.search-input{
+    background: none;
+    height: 4vh;
+    width: min(250px);
+    border: 1px solid var(--line-clr);
+    border-radius: 100em;
+    color: var(--text-clr);
+    font-size: 1em;
+    padding-left: 1em;
+    margin-right: 20px;
+}
+
+.search-btn{
+    background: none;
+    border: none;
+}
+
+.settings-navbar{
+    display: inline-flex;
+    justify-content: flex-end;
+    height: 100%;
+    width: 300px;
+    border-left: 1px var(--line-clr) solid;
+    h2, h3, p, div { margin: auto 0px; } 
+}
+
+.settings-navbar:last-child{
+    margin-right: 50px;
+}
+
+.add-btn{
+    display: inline-flex;
+    text-wrap: nowrap;
+    margin: auto 25px;
+    background: none;
+    padding: 1em;
+    border-radius: 100em;
+    border: 1px solid var(--line-clr);
+
+    svg{
+        width: 33px;
+        height: 33px;
+    }
+
+    p{
+        margin: auto;
+        margin-right: 20px;
+        color: var(--text-clr);
+    }
+}
+
+.settings-btn{
+    display: flex;
+    background: none;
+    border: none;
+    margin: auto 0;
+
+    svg{
+        width: 33px;
+        height: 33px;
+    }
+
+}
+
+svg{
+    width: 26px;
+    height: 26px;
+}
+
+/* --------------------------------------------------- NAVBAR END --------------------------------------------------- */
+/* --------------------------------------------------- MAIN --------------------------------------------------- */
+
+.container-main{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--hover-clr);
+    height: 150vh;
+    width: 100%;
+    right: 0;  
+    padding: 2rem;
+    text-align: center;
+    text-wrap: wrap;
+}
+
+.container-main div:not(:first-child){
+    display: none;
+}
+
+.base{
+    background-color: green;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "graph-1 graph-2"
+    "updates updates";
+}
+
+#graph-1{
+    grid-area: graph-1;
+    background-color: blue;
+    margin: 1em;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 2em;
+}
+
+#graph-2{
+    grid-area: graph-2;
+    background-color: purple;
+    margin: 1em;
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 2em;
+}
+
+.updates{
+    grid-area: updates;
+    background-color: orange;
+    margin: 1em;
+    margin-top: 0.5em;
+    border-radius: 2em;
+}
+
+.sub{
+    width: 350px;
+}
+
+/* --------------------------------------------------- MAIN END --------------------------------------------------- */
+
+
+@media(max-width: 1050px){
+    .container-nav{
+        h2, input, p { margin: auto; } 
+    }
+
+    #navbar{
+        grid-template-columns: 1fr;
+    }
+
+    .search-input{
+        display: none;
+    }
+
+    .settings-navbar{
+        display: none;
+    }
+
+    .sub{
+        display: none;
+    }
+
+    .container-main{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media(max-width: 1320px){
+
+    .add-btn{
+        border: none;
+    }
+
+    .add-btn > p{
+        display: none;
+    }
+
+    .settings-navbar{
+        width: 200px;
+    }
+
+    .sub{
+        width: 250px;
+    }
+}

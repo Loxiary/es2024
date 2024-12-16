@@ -8,10 +8,10 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
-const PORT = 3000;
+const PORT = 80;
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/public/template/html/disclaimer.html'));
+    res.sendFile(path.join(__dirname + '/public/template/html/fast_view.html'));
   });
 
   app.listen(PORT, function () {

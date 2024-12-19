@@ -8,6 +8,10 @@ const doppler_div = document.getElementById("doppler")
 function continueBtn(){
     main_text_div.classList.add("removed")
     continue_btn.classList.add("removed")
+
+    wait(1500).then(() => {
+        window.location.href = 'home/';
+    })
     // wait(1000).then(() => {
     //     console.log("test")
     //     main_div.classList.add("next")

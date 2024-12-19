@@ -8,9 +8,17 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
-const PORT = 80;
+const PORT = 3000;
 
 app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname + '/public/template/html/disclaimer.html'));
+  });
+
+app.get('/home/', (req, res) => {
+    res.sendFile(path.join(__dirname + '/public/template/html/main.html'));
+  });
+
+  app.get('/overview/', (req, res) => {
     res.sendFile(path.join(__dirname + '/public/template/html/fast_view.html'));
   });
 

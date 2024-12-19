@@ -3,40 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/template/css/styles.css">
-    <link rel="stylesheet" href="/public/template/css/main.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/template/css/styles.css">
+    <link rel="stylesheet" href="/template/css/main.css">
+    <title>Effet Doppler</title>
 </head>
 <body>
 
     
     <main class="main-div" id="main-div">
         <div class="left-div" id="left-div">
-            <img src="/public/images/png/stars-img.png" alt="stars" id="stars-img">
+            <div id="left-title">
+                <h1 style="position: relative; color: whitesmoke; font-size: 5vmin;">La lumière</h1>
+                <button onclick="continueBtn()" id="continue-btn"><span id="btn-span">Continuer</span></button>
+            </div>
+            <img src="/images/png/stars-img.png" alt="stars" id="stars-img">
         </div>
-        <div class="right-div">
-            
+        <div class="right-div" id="right-div">
+            <div id="right-title">
+                <h1 style="position: relative; color: whitesmoke; font-size: 5vmin;">Le son</h1>
+                <button onclick="continueBtn()" id="continue-btn"><span id="btn-span">Continuer</span></button>
+            </div>
         </div>
         <div class="modal-div">
             <div class="modal-flex">
                 <div class="modal-title">
-                    <img src="/public/images/png/titme.png" alt="title" id="title-img">
-                    <img src="/public/images/png/logo-title.png" alt="logo-title" id="logo-title">
+                    <img src="/images/png/titme.png" alt="title" id="title-img">
+                    <img src="/images/png/logo-title.png" alt="logo-title" id="logo-title">
                 </div>
-                <img src="/public/images/png/vertical.png" alt="vertical" id="vertical-img">
+                <img src="/images/png/vertical.png" alt="vertical" id="vertical-img">
             </div>
         </div>
+
+        <button onclick="overviewBtn()" id="overview-btn" class="removed"><span id="btn-span">Aller à la vue d'ensemble</span></button>
     </main>
 
     <div class="background-images">
-        <img src="/public/images/png/bg/01.png" alt="bg" class="object" value="5">
-        <img src="/public/images/png/bg/02.png" alt="bg" class="object" value="5">
-        <img src="/public/images/png/bg/03.png" alt="bg" class="object" value="-5">
-        <img src="/public/images/png/bg/04.png" alt="bg" class="object" value="5">
-        <img src="/public/images/png/bg/05.png" alt="bg" class="object" value="-5">
+        <img src="/images/png/bg/01.png" alt="bg" class="object" value="5">
+        <img src="/images/png/bg/02.png" alt="bg" class="object" value="5">
+        <img src="/images/png/bg/03.png" alt="bg" class="object" value="-5">
+        <img src="/images/png/bg/04.png" alt="bg" class="object" value="5">
+        <img src="/images/png/bg/05.png" alt="bg" class="object" value="-5">
     </div>
 
-    <script src="/public/template/js/background.js"></script>
-    <script src="/public/template/js/main.js"></script>
+    <script src="/template/js/background.js"></script>
+    <script src="/template/js/main.js"></script>
 </body>
 </html>

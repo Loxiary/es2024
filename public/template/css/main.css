@@ -2,13 +2,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     transition: 0.25s ease-in-out;
+    animation: openingFadeIn 2s ease-in-out;
 }
 
-.main-div:has(.left-div:hover):hover{
+.main-div:has(.left-div.activated:hover):hover{
     grid-template-columns: 1fr 0.5fr;
 }
 
-.main-div:has(.right-div:hover):hover{
+.main-div:has(.right-div.activated:hover):hover{
     grid-template-columns: 0.5fr 1fr;
 }
 
@@ -28,24 +29,33 @@
 
 }
 
-.left-div:hover ~ .modal-div {
-    margin-left: 4.7vw;
+.left-div.activated:hover ~ .modal-div {
+    left: calc((100% * 2 / 3));
 }
 
-.right-div:hover ~ .modal-div {
-    margin-left: -28.7vw;
+.left-div.activated:hover > #left-title {
+    opacity: 100%;
 }
 
-.right-div:hover ~ #stars-img {
+.right-div.activated:hover ~ .modal-div {
+    left: calc((100% * 1 / 3) - 0px);
+}
+
+.right-div.activated:hover ~ #stars-img {
     background-color: red;
 }
 
-.left-div:hover > #stars-img {
+.right-div.activated:hover > #right-title {
+    opacity: 100%;
+}
+
+.left-div.activated:hover > #stars-img {
+    opacity: 100%;
     width: 131.25%;
     animation: 2s floating ease-in-out infinite
 }
 
-.right-div:hover ~ .modal-div > .modal-flex > .modal-title > #logo-title {
+.right-div.activated:hover ~ .modal-div > .modal-flex > .modal-title > #logo-title {
     rotate: 45deg;
     width: 85%;
     margin-bottom: -19vh;
@@ -54,16 +64,23 @@
 }
 
 .left-div{
-    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
     overflow: hidden;
+    background-image: url(/images/jpg/space_highquality.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 25% 75%;
 }
 
 .right-div{
-    z-index: 10;
-}
-
-#left-div:hover ~ #main-div{
-    background-color: red;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
 .modal-div{
@@ -105,6 +122,7 @@
 #title-img{
     width: 70%;
     height: auto;
+    z-index: 1000;
 }
 
 #vertical-img{
@@ -113,9 +131,12 @@
 }
 
 #stars-img{
+    position: relative;
+    right: 100px;
     height: 100vmin;
-    width: 175%;
+    width: 131.75%;
     transition: 250ms ease-in-out;
+    opacity: 0%;
 }
 
 @keyframes floating {
@@ -126,6 +147,77 @@
 		transform: translateY(0.66%);	
 	}	
 	100% {
-		transform: translatY(0%);
+		transform: translateY(0%);
 	}			
+}
+
+#continue-btn, #overview-btn{
+    z-index: 500;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-size: 2vmin;
+    position: relative;
+    height: 5vh;
+    width: 15vh;
+    border: none;
+    border-radius: 1000px;
+    background: linear-gradient(75deg, #9426af, #3414a7); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    color: whitesmoke;
+    transition: all 250ms ease-in-out;
+
+}
+
+#overview-btn{
+    top: 0;
+    right: 0;
+    z-index: 500;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-size: 1.5vmin;
+    position: absolute;
+    height: 5vh;
+    width: 25vh;
+    border: none;
+    border-radius: 1000px;
+    background: linear-gradient(75deg, #9426af, #3414a7); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    color: whitesmoke;
+    transition: all 250ms ease-in-out;
+    margin: 5vmin;
+    transition: 0.5s ease-in-out;
+}
+
+#overview-btn.removed{
+    opacity: 0;
+}
+
+#continue-btn.removed{
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+#left-title, #right-title{
+    opacity: 0;
+    position: absolute;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 250ms ease-in-out;
+}
+
+@keyframes openingFadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
 }

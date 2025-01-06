@@ -11,17 +11,13 @@ app.use(express.static(__dirname + '/public'));
 const PORT = 3000;
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/public/template/html/disclaimer.html'));
+    res.redirect('/main');
   });
 
-app.get('/home/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/public/template/html/main.html'));
-  });
-
-  app.get('/overview/', (req, res) => {
+app.get('/main/', (req, res) => {
     res.sendFile(path.join(__dirname + '/public/template/html/fast_view.html'));
-  });
+});
 
-  app.listen(PORT, function () {
+app.listen(PORT, function () {
     console.log(`Example app listening on port ${PORT}!`);
-  });
+});

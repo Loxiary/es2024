@@ -2,6 +2,7 @@ const express = require("express");
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const path = require('path')
+const os = require("os")
 
 const app = express();
 app.use(cookieParser());
@@ -17,6 +18,16 @@ app.get('/', (req, res) => {
 app.get('/main/', (req, res) => {
     res.sendFile(path.join(__dirname + '/public/template/html/fast_view.html'));
 });
+
+app.post('/update-username', (req, res) => {
+  const username = os.userInfo().username;
+
+  if (username) {
+      res.json({ success: true, username: username });    
+  } else {
+      res.status(400).json({ success: false, message: 'Username not found.' });
+  }
+})
 
 app.listen(PORT, function () {
     console.log(`Example app listening on port ${PORT}!`);

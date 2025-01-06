@@ -7,12 +7,12 @@
     <link rel="shortcut icon" href="/images/logo_white.png" type="image/x-icon">
     <link rel="stylesheet" href="/template/css/fast_view.css">
 </head>
-<body>
+<body onload="updateUsername()">
     
     <aside id="sidebar">
         <ul>
             <li>
-                <span class="logo">Doppler effect</span>
+                <span class="logo" id="username-text">Doppler effect</span>
                 <button onclick=toggleSidebar() id="toggle-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg>
                 </button>

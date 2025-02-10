@@ -165,6 +165,10 @@ svg{
 /* --------------------------------------------------- SIDEBAR END --------------------------------------------------- */
 
 @media(max-width: 800px){
+    aside{
+        width: 100%;
+    }
+
     #sidebar{
         height: 60px;
         width: 100%;
@@ -240,6 +244,7 @@ svg{
     display: grid;
     grid-template-columns: 1fr;
     border-bottom: 1px var(--line-clr) solid;
+    background-color: #11121a;
 }
 
 .container-nav{
@@ -335,16 +340,27 @@ svg{
 /* --------------------------------------------------- NAVBAR END --------------------------------------------------- */
 /* --------------------------------------------------- MAIN --------------------------------------------------- */
 
+main{
+    background-color: #222533;
+}
+
 .container-main{
     display: flex;
     flex-direction: column;
     background-color: var(--hover-clr);
-    height: 150vh;
-    width: 100%;
+    height: fit-content;
+    width: 90%;
     right: 0;  
-    padding: 2rem;
+    padding: 5%;
     text-align: center;
     text-wrap: wrap;
+}
+
+footer{
+    margin-top: 5rem;
+    font-size: small;
+    text-decoration: underline;
+    font-style: italic;
 }
 
 .container-main div:not(:first-child){
@@ -390,8 +406,47 @@ svg{
     width: 350px;
 }
 
+#introduction-div{
+    height: fit-content;
+    padding: 10%;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#introduction-div p{
+    margin-top: 4rem;
+    text-align: left;
+}
+
+#introduction-div h3{
+    font-weight: 500;
+    margin-top: 4rem;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+}
+
+#introduction-div span{
+    font-size: small;
+    font-weight: 300;
+    font-style: italic;
+    text-decoration: underline;
+}
+
 /* --------------------------------------------------- MAIN END --------------------------------------------------- */
 
+@media(max-width: 800px){
+    #introduction-div span{
+        padding-bottom: 90px;
+    }
+
+    #introduction-div iframe{
+        width: 100%;
+    }
+
+    #introduction-div{
+        padding: 5%;
+    }
+}
 
 @media(max-width: 1050px){
     .container-nav{
@@ -416,7 +471,9 @@ svg{
 
     .container-main{
         grid-template-columns: 1fr;
+        height: fit-content;
     }
+    
 }
 
 

@@ -14,6 +14,9 @@ const PORT = 3000;
 app.get('/', (req, res) => {
     res.redirect('/main');
   });
+app.get('#', (req, res) => {
+    res.redirect('/main');
+  });
 
 app.get('/main/', (req, res) => {
     res.sendFile(path.join(__dirname + '/public/template/html/index.html'));

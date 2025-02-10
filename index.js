@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
   });
 
 app.get('/main/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/public/template/html/fast_view.html'));
+    res.sendFile(path.join(__dirname + '/public/template/html/index.html'));
 });
 
 app.post('/update-username', (req, res) => {

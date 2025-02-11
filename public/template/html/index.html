@@ -7,18 +7,18 @@
     <link rel="shortcut icon" href="/images/logo_white.png" type="image/x-icon">
     <link rel="stylesheet" href="/template/css/index.css">
 </head>
-<body onload="updateUsername()">
+<body>
     
     <aside id="sidebar">
         <ul>
             <li>
-                <span class="logo" id="username-text">Doppler effect</span>
+                <span class="logo" id="username-text">Menu</span>
                 <button onclick=toggleSidebar() id="toggle-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg>
                 </button>
             </li>
             <li>
-                <a onclick="switchText(1)">
+                <a onclick="switchText(this)" data-section="0000">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M680-360q-17 0-28.5-11.5T640-400v-160q0-17 11.5-28.5T680-600h120q17 0 28.5 11.5T840-560v40h-60v-20h-80v120h80v-20h60v40q0 17-11.5 28.5T800-360H680Zm-300 0v-240h160q17 0 28.5 11.5T580-560v40q0 17-11.5 28.5T540-480q17 0 28.5 11.5T580-440v40q0 17-11.5 28.5T540-360H380Zm60-150h80v-30h-80v30Zm0 90h80v-30h-80v30Zm-320 60v-200q0-17 11.5-28.5T160-600h120q17 0 28.5 11.5T320-560v200h-60v-60h-80v60h-60Zm60-120h80v-60h-80v60Z"/></svg>
                     <span>Introduction</span>
                 </a>
@@ -32,11 +32,11 @@
                 <ul class="sub-menu">
                     <div>
                         <li>
-                            <a onclick="switchText(2)">1. Nature et caractéristiques des ondes</a></li>
+                            <a onclick="switchText(this)" data-section="0101">1. Nature et caractéristiques des ondes</a></li>
                         <li>
-                            <a onclick="switchText(3)">2. Propagation des ondes</a></li>
+                            <a onclick="switchText(this)" data-section="0102">2. Propagation des ondes</a></li>
                         <li>
-                            <a onclick="switchText(4)">3. Les phénomènes liés aux ondes</a></li>
+                            <a onclick="switchText(this)" data-section="0103">3. Les phénomènes liés aux ondes</a></li>
                     </div>
                 </ul>
             </li>
@@ -48,9 +48,9 @@
                 </button>
                 <ul class="sub-menu">
                     <div>
-                        <li><a onclick="switchText(5)">1. Définition et explication du phénomène</a></li>
-                        <li><a onclick="switchText(6)">2. Expériences et interprétation des résultats</a></li>
-                        <li><a onclick="switchText(7)">3. Illustration mathématique</a></li>
+                        <li><a onclick="switchText(this)" data-section="0201">1. Définition et explication du phénomène</a></li>
+                        <li><a onclick="switchText(this)" data-section="0202">2. Expériences et interprétation des résultats</a></li>
+                        <li><a onclick="switchText(this)" data-section="0203">3. Illustration mathématique</a></li>
                     </div>
                 </ul>
             </li>
@@ -62,20 +62,19 @@
                 </button>
                 <ul class="sub-menu">
                     <div>
-                        <li><a onclick="switchText(8)">1. Définition, particularités et applications astronomiques</a></li>
-                        <li><a onclick="switchText(9)">2. Expériences et interprétation des résultats</a></li>
-                        <li><a onclick="switchText(10)">3. Illustration et précision des utilisations</a></li>
+                        <li><a onclick="switchText(this)" data-section="0301">1. Définition, particularités et applications astronomiques</a></li>
+                        <li><a onclick="switchText(this)" data-section="0302">2. Expériences et interprétation des résultats</a></li>
                     </div>
                 </ul>
             </li>
             <li>
-                <a onclick="switchText(11)">
+                <a onclick="switchText(this)" data-section="0400">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M560-360q17 0 29.5-12.5T602-402q0-17-12.5-29.5T560-444q-17 0-29.5 12.5T518-402q0 17 12.5 29.5T560-360Zm-30-128h60q0-29 6-42.5t28-35.5q30-30 40-48.5t10-43.5q0-45-31.5-73.5T560-760q-41 0-71.5 23T446-676l54 22q9-25 24.5-37.5T560-704q24 0 39 13.5t15 36.5q0 14-8 26.5T578-596q-33 29-40.5 45.5T530-488ZM320-240q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg>                    
                     <span>Quiz</span>
                 </a>
             </li>
             <li>
-                <a onclick="switchText(12)">
+                <a onclick="switchText(this)" data-section="0500">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m320-240 160-122 160 122-60-198 160-114H544l-64-208-64 208H220l160 114-60 198ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
                     <span>Conclusion</span>
                 </a>
@@ -115,8 +114,7 @@
         </nav>
 
         <div class="container-main">
-
-            <div id="introduction-div">
+            <div id="section-0000" class="section">
                 <h1 style="margin-bottom: 2rem;"><pre>Introduction</pre></h1>
                 <p><b>L’effet Doppler</b> est un <b>phénomène physique</b> bien plus présent qu’on ne puisse l’imaginer. 
                     Lorsque une ambulance passe à toute vitesse à côté d’un point fixe, le son de sa sirène semble <b>plus aigu lorsqu’elle se rapproche</b>, puis <b>plus grave lorsqu’elle s’éloigne</b>.<br><br> 
@@ -132,62 +130,62 @@
                 <br><span>Source : <b>Bo Manton</b> sur Youtube</span>
             </div>
 
-            <div id="0101-div">
+            <div id="section-0101" class="section">
                 <h1 style="margin-bottom: 2rem;">I / Le fonctionnement d'une onde</h1>
                 <pre>1. Nature et caractéristiques des ondes</pre>
                 <p>Enter text</p>
             </div>
 
-            <div id="0102-div">
+            <div id="section-0102" class="section">
                 <h1 style="margin-bottom: 2rem;">I / Le fonctionnement d'une onde</h1>
                 <pre>2. Propagation des ondes</pre>
                 <p>Enter text</p>
             </div>
 
-            <div id="0103-div">
+            <div id="section-0103" class="section">
                 <h1 style="margin-bottom: 2rem;">I / Le fonctionnement d'une onde</h1>
                 <pre>3. Les phénomènes liés aux ondes</pre>
                 <p>Enter text</p>
             </div>
 
-            <div id="0201-div">
+            <div id="section-0201" class="section">
                 <h1 style="margin-bottom: 2rem;"><pre>II / L'effet Doppler en lien avec le son</pre></h1>
                 <pre>1. Définition et explication du phénomène</pre>
                 <p>Enter text</p>
             </div>
 
-            <div id="0202-div">
+            <div id="section-0202" class="section">
                 <h1 style="margin-bottom: 2rem;"><pre>II / L'effet Doppler en lien avec le son</pre></h1>
                 <pre>2. Expériences et interpréations des résultats</pre>
                 <p>Enter text</p>
             </div>
 
-            <div id="0203-div">
+            <div id="section-0203" class="section">
                 <h1 style="margin-bottom: 2rem;"><pre>II / L'effet Doppler en lien avec le son</pre></h1>
                 <pre>3. Illustration mathématique</pre>
                 <p>Enter text</p>
             </div>
 
-            <div id="0301-div">
+            <div id="section-0301" class="section">
                 <h1 style="margin-bottom: 2rem;"><pre>III / L'effet Doppler en lien avec la lumière</pre></h1>
                 <pre>1. Expériences réalisées</pre>
                 <p>Enter text</p>
             </div>
 
-            <div id="0302-div">
+            <div id="section-0302" class="section">
                 <h1 style="margin-bottom: 2rem;"><pre>III / L'effet Doppler en lien avec la lumière</pre></h1>
                 <pre>2. Interprétation des résultats</pre>
                 <p>Enter text</p>
             </div>
 
-            <div id="conclusion-div">
-                <h1 style="margin-bottom: 2rem;"><pre>Conclusion</pre></h1>
+            <div id="section-0400" class="section">
+                <h1 style="margin-bottom: 2rem;"><pre>Quiz</pre></h1>
                 <p>Enter text</p>
             </div>
 
-            <div id="home-div">
-                <h2>L'effet Doppler</h2>
-                <p>Projet d'enseignement scientifique réalisé par [...], [...], [...]</p>
+            <div id="section-0500" class="section">
+                <h1 style="margin-bottom: 2rem;"><pre>Conclusion</pre></h1>
+                <p>Enter text</p>
             </div>
         </div>
     </main>

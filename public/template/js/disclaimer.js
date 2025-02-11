@@ -10,7 +10,7 @@ function continueBtn(){
     continue_btn.classList.add("removed")
 
     wait(1500).then(() => {
-        window.location.href = 'home/';
+        window.location.href = 'content/';
     })
     // wait(1000).then(() => {
     //     console.log("test")

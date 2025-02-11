@@ -12,13 +12,10 @@ app.use(express.static(__dirname + '/public'));
 const PORT = 3000;
 
 app.get('/', (req, res) => {
-    res.redirect('/main');
-  });
-app.get('#', (req, res) => {
-    res.redirect('/main');
-  });
+    res.sendFile(path.join(__dirname + '/public/template/html/disclaimer.html'));
+});
 
-app.get('/main/', (req, res) => {
+app.get('/content', (req, res) => {
     res.sendFile(path.join(__dirname + '/public/template/html/index.html'));
 });
 

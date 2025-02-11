@@ -432,6 +432,17 @@ footer{
     text-decoration: underline;
 }
 
+#home-div h2{
+    font-weight: 700;
+    text-decoration: underline;
+    font-size: 3rem;
+    margin: 3rem 0;
+}
+
+#home-div p{
+    text-align: left;
+}
+
 /* --------------------------------------------------- MAIN END --------------------------------------------------- */
 
 @media(max-width: 800px){

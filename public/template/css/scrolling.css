@@ -10,23 +10,43 @@ body{
     height: 100vh;
     font-family: 'Trebuchet MS', sans-serif;
     overflow: hidden;
-}
-
-nav{
-    height: 6vmax;
-    background-color: aqua;
+    /* background-image: url(../../images/png/bg/pb.svg);
+    background-size: cover;
+    background-repeat: no-repeat; */
 }
 
 .section_header{
-
+    height: 100%;
 }
 
-.section_header h1{
-    text-align: center;
-    padding: 1em 0 0 0;
-    font-size: 300%;
+nav{
+    height: 4em;
 }
 
-.section_header p{
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+    height: 100%;
+}
+
+nav li{
+    padding: 0 1.5rem;
+    font-size: 0.8rem;
+}
+
+nav li:hover{
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.title_div{
+    margin: 1em 0;
     text-align: center;
+}
+
+.title_div h1{
+    font-size: 3.5em;
 }

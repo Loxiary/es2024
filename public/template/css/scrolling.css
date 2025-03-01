@@ -77,12 +77,12 @@ nav li:hover{
 }
 
 .section_introduction{
-    padding: 5em 17.5em;
+    padding: 5em 12.5em;
     z-index: 100;
     position: relative;
     text-align: left;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto 1fr;
     background-color: #16285b;
 }
 
@@ -91,6 +91,7 @@ nav li:hover{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 0 2.5em;
 }
 
 .section_introduction #introduction-video{
@@ -99,6 +100,7 @@ nav li:hover{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 0 2.5em;
 }
 
 .section_introduction #introduction-video h3{
@@ -126,4 +128,9 @@ nav li:hover{
 
 .background_not_absolute img{
     display: block;
+}
+
+.vertical_bar{
+    width: 1px;
+    background-color: #ffffff;
 }

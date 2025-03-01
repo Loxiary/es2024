@@ -19,3 +19,7 @@ window.addEventListener('scroll', () => {
     birds.style.left = value * 0.2 + 'px';
     bat_2.style.marginTop = value * 0.5 + 'px';
 })
+
+function ToContentWindow(){
+    window.location.href = 'content/';
+}

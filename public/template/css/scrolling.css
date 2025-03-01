@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+    height: 100vh;
+    font-family: "Poppins", serif;
+    color: #ffffff;
+    overflow-x: hidden;
+
+    /* background-image: url(../../images/png/bg/pb.svg);
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+nav{
+    height: 6em;
+    position: absolute;
+    width: 100%;
+    font-weight: bold;
+    z-index: 10;
+
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+    height: 100%;
+}
+
+nav li{
+    margin: 0 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10000px;
+    font-size: 1rem;
+    transition: all 250ms ease-in-out;
+}
+
+nav li:nth-child(3){
+    color: #16285b;
+}
+
+nav li:hover{
+    cursor: pointer;
+    font-size: 1.1rem;
+    background-color: #283054;
+    color: #ffffff;
+}
+
+.title_div{
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title_div h1{
+    font-size: 6em;
+}
+
+.section_header{
+    pointer-events: none;
+    z-index: 10;
+    margin-bottom: 5em;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.section_introduction{
+    padding: 5em 12.5em;
+    z-index: 100;
+    position: relative;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    background-color: #16285b;
+}
+
+.section_introduction #introduction-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2.5em;
+}
+
+.section_introduction #introduction-video{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2.5em;
+}
+
+.section_introduction #introduction-video h3{
+    margin-bottom: 1em;
+}
+
+.background{
+    position: absolute;
+    pointer-events: none;
+}
+
+.background img{
+    position: absolute;
+    z-index: 5;
+}
+
+.background img:last-child{
+    z-index: 50;
+}
+
+.background_not_absolute{
+    pointer-events: none;
+    height: fit-content;
+}
+
+.background_not_absolute img{
+    display: block;
+}
+
+.vertical_bar{
+    width: 1px;
+    background-color: #ffffff;
+}

@@ -9,16 +9,22 @@ const birds = document.getElementById("birds");
 
 let multiplier = 0.5
 
-window.addEventListener('scroll', () => {
-    let value = window.scrollY;
+window.addEventListener('scroll', updateParallax);
+window.addEventListener('touchmove', updateParallax);
 
-    title.style.marginTop = value * 1 + 'px';
-    sun.style.top = value * -0.5 + 'px';
-    bat_4.style.left = value * -0.5 + 'px';
-    bat_3.style.left = value * 0.5 + 'px';
-    birds.style.left = value * 0.2 + 'px';
-    bat_2.style.marginTop = value * 0.5 + 'px';
-})
+function updateParallax() {
+    setTimeout(() => {
+        let value = window.scrollY;
+
+        title.style.marginTop = value * 1 + 'px';
+        sun.style.top = value * -0.5 + 'px';
+        bat_4.style.left = value * -0.5 + 'px';
+        bat_3.style.left = value * 0.5 + 'px';
+        birds.style.left = value * 0.2 + 'px';
+        bat_2.style.marginTop = value * 0.5 + 'px';
+    }, 0);
+}
+
 
 function ToContentWindow(){
     window.location.href = 'content/';

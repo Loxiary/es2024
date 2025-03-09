@@ -22,6 +22,22 @@ function updateParallax() {
         bat_3.style.left = value * 0.5 + 'px';
         birds.style.left = value * 0.2 + 'px';
         bat_2.style.marginTop = value * 0.5 + 'px';
+
+        if(value > 1200){
+            title.style.display = "none";
+            sun.style.display = "none";
+            bat_4.style.display = "none";
+            bat_3.style.display = "none";
+            birds.style.display = "none";
+            bat_2.style.display = "none";
+        }else{
+            title.style.display = "block";
+            sun.style.display = "block";
+            bat_4.style.display = "block";
+            bat_3.style.display = "block";
+            birds.style.display = "block";
+            bat_2.style.display = "block";
+        }
     }, 0);
 }
 

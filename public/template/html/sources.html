@@ -13,20 +13,43 @@
     
     <div class="mobile_nav_div" id="mobile-nav-div">
         <div class="mobile_btns_div">
+            <button id="Home" onclick="HomeButtonClicked()">Home</button>
             <button id="Tout le contenu" onclick="ToContentWindow()">Tout le contenu</button>
             <button id="Galerie" onclick="GaleryButtonClicked()">Galerie</button>
-            <button id="Sources" onclick="SourceButtonClicked()">Sources</button>
+            <button id="Sources" onclick="SourceButtonClicked()" class="active">Sources</button>
             <button id="À propos" onclick="AboutButtonClicked()">À propos</button>
         </div>
     </div>
 
     <nav>
         <ul>
+            <li><a onclick="HomeButtonClicked()">Home</a></li>
             <li><a onclick="ToContentWindow()">Tout le contenu</a></li>
             <li><a onclick="GaleryButtonClicked()">Galerie</a></li>
-            <li><a onclick="SourceButtonClicked()">Sources</a></li>
+            <li><a onclick="SourceButtonClicked()" class="active">Sources</a></li>
             <li><a onclick="AboutButtonClicked()">À propos</a></li>
         </ul>
     </nav>
+
+    <main>
+        <h1>Sources</h1>
+
+        <br>
+        <br>
+        
+        <span>Wikipédia, multiples éditeurs, Effet Doppler IN Wikipédia, 20/09,
+            Disponible à l'adresse : https://fr.wikipédia.org/wiki/Effet_Doppler</span><br>
+        <span>Sciences d'école, Lycée Massena - Nice, Effet Doppler IN Sciences à l'école, 21/11,
+            Disponible à l'adresse : https://www.sciencesalecole.org/wp-content/uploads/2018/01/IPhO-BRUNEL-05-Doppler.pdf</span><br>
+        <span>Raphaël Taïeb, Le Livre Scolaire Terminale spécialité physique, Hachette, 2020,
+            Chapitre Ondes et signaux, pages 464 à 473.</span><br>
+        <span>Hawking Stephen, Une Brève Histoire du Temps, J'ai lu!, 27/08/2007,
+            246 pages.
+            </span><br>
+        <span>Futura-Sciences, Guillaume Josse, 2018, 10/02,
+            DIsponible à l'adresse : https://www.futura-sciences.com/</span><br>
+        <span>Alloprof, Sandrine Faust, L'effet Doppler (notions avancées) IN Alloprof, 10/02,
+            Disponible à l'adresse : https://www.alloprof.qc.ca/fr/eleves/bv/sciences/l-effet-doppler-s1546</span><br>
+    </main>
 </body>
 </html>

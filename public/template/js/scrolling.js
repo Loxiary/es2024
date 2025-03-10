@@ -9,17 +9,56 @@ const birds = document.getElementById("birds");
 
 let multiplier = 0.5
 
-window.addEventListener('scroll', () => {
-    let value = window.scrollY;
+let btns = ["Home", "Tout le contenu", "Galerie", "Sources", "À propos"]
 
-    title.style.marginTop = value * 1 + 'px';
-    sun.style.top = value * -0.5 + 'px';
-    bat_4.style.left = value * -0.5 + 'px';
-    bat_3.style.left = value * 0.5 + 'px';
-    birds.style.left = value * 0.2 + 'px';
-    bat_2.style.marginTop = value * 0.5 + 'px';
-})
+window.addEventListener('scroll', updateParallax);
+window.addEventListener('touchmove', updateParallax);
+
+function updateParallax() {
+    setTimeout(() => {
+        let value = window.scrollY;
+
+        title.style.marginTop = value * 1 + 'px';
+        sun.style.top = value * -0.5 + 'px';
+        bat_4.style.left = value * -0.5 + 'px';
+        bat_3.style.left = value * 0.5 + 'px';
+        birds.style.left = value * 0.2 + 'px';
+        bat_2.style.marginTop = value * 0.5 + 'px';
+
+        if(value > 1200){
+            title.style.display = "none";
+            sun.style.display = "none";
+            bat_4.style.display = "none";
+            bat_3.style.display = "none";
+            birds.style.display = "none";
+            bat_2.style.display = "none";
+        }else{
+            title.style.display = "block";
+            sun.style.display = "block";
+            bat_4.style.display = "block";
+            bat_3.style.display = "block";
+            birds.style.display = "block";
+            bat_2.style.display = "block";
+        }
+    }, 0);
+}
 
 function ToContentWindow(){
     window.location.href = 'content/';
+}
+
+function ToggleNavbar(){
+    document.getElementById("mobile-nav-div").classList.toggle("show")
+}
+
+function GaleryButtonClicked(){
+    window.location.href = 'galery/';
+}
+
+function SourceButtonClicked(){
+    window.location.href = 'sources/';
+}
+
+function AboutButtonClicked(){
+    window.location.href = 'about/';
 }

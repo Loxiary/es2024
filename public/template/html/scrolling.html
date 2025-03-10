@@ -3,41 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/template/css/scrolling.css">
-    <script src="/template/js/scrolling.js" defer></script>
+    <link rel="stylesheet" href="../../template/css/scrolling.css">
     <title>Effet Doppler</title>
 </head>
 <body>
+
+    <button id="navbar-btn" onclick="ToggleNavbar()">≡</button>
     
+    <div class="mobile_nav_div" id="mobile-nav-div">
+        <div class="mobile_btns_div">
+            <button id="Tout le contenu" onclick="ToContentWindow()">Tout le contenu</button>
+            <button id="Galerie" onclick="GaleryButtonClicked()">Galerie</button>
+            <button id="Sources" onclick="SourceButtonClicked()">Sources</button>
+            <button id="À propos" onclick="AboutButtonClicked()">À propos</button>
+        </div>
+    </div>
+
     <nav>
         <ul>
-            <li>Home</li>
             <li><a onclick="ToContentWindow()">Tout le contenu</a></li>
-            <li>Galerie</li>
-            <li>Sources</li>
-            <li>À propos</li>
+            <li><a onclick="GaleryButtonClicked()">Galerie</a></li>
+            <li><a onclick="SourceButtonClicked()">Sources</a></li>
+            <li><a onclick="AboutButtonClicked()">À propos</a></li>
         </ul>
     </nav>
 
+
     <div class="background">
-        <img id="sun" src="/images/png/inkscape/sun.png" alt="sun">
-        <img id="bat_4" src="/images/png/inkscape/bat_4.png" alt="bat_4">
-        <img id="bat_3" src="/images/png/inkscape/bat_3.png" alt="bat_3">
-        <img id="birds" src="/images/png/inkscape/birds.png" alt="birds">
-        <img id="bat_2" src="/images/png/inkscape/bat_2.png" alt="bat_2">
-        <img id="bat_1" src="/images/png/inkscape/bat_1.png" alt="bat_1">
+        <img id="sun" src="../../images/png/inkscape/sun.png" alt="sun">
+        <img id="bat_4" src="../../images/png/inkscape/bat_4.png" alt="bat_4">
+        <img id="bat_3" src="../../images/png/inkscape/bat_3.png" alt="bat_3">
+        <img id="birds" src="../../images/png/inkscape/birds.png" alt="birds">
+        <img id="bat_2" src="../../images/png/inkscape/bat_2.png" alt="bat_2">
+        <img id="bat_1" src="../../images/png/inkscape/bat_1.png" alt="bat_1">
     </div>
 
     <section class="section_header" id="title">
         <div class="title_div">
             <h1>Effet Doppler</h1>
-            <span style="margin-top: 0.5em;">Projet réalisé par [...], [...], [...]</span>
+            <span style="margin-top: 0.5em;">Projet réalisé par Tristan Leymonie, Mattis Fardo, Gabin Gennesseaux</span>
         </div>
     </section>
 
     <div class="background_not_absolute">
-        <img id="background" src="/images/png/inkscape/background.png" alt="background">
+        <img id="background" src="../../images/png/inkscape/background.png" alt="background">
     </div>
+
+    <div class="mobile_device"></div>
 
     <section class="section_introduction">
         <div id="introduction-text">
@@ -52,13 +64,18 @@
         <div class="vertical_bar"></div>
         <div id="introduction-video">
             <h3>Vidéo d'exemple de l'effet doppler pendant un course automobile</h3>
-            <iframe width="420" height="315" alt="video"
+            <iframe alt="video"
             src="https://www.youtube.com/embed/dC4Lp7k4zrI">
             </iframe>
             <br><span>Source : <b>Bo Manton</b> sur Youtube</span>
         </div>
     </section>
 
+    <section class="section_first_part">
+        <div>treset</div>
+    </section>
+
+    <script src="../../template/js/scrolling.js"></script>
 </body>
 </html>
 

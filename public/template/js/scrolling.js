@@ -9,6 +9,8 @@ const birds = document.getElementById("birds");
 
 let multiplier = 0.5
 
+let btns = ["Home", "Tout le contenu", "Galerie", "Sources", "À propos"]
+
 window.addEventListener('scroll', updateParallax);
 window.addEventListener('touchmove', updateParallax);
 
@@ -41,7 +43,26 @@ function updateParallax() {
     }, 0);
 }
 
-
 function ToContentWindow(){
     window.location.href = 'content/';
+}
+
+function ToggleNavbar(){
+        document.getElementById("mobile-nav-div").classList.toggle("show")
+}
+
+function HomeButtonClicked(){
+
+}
+
+function GaleryButtonClicked(){
+
+}
+
+function SourceButtonClicked(){
+
+}
+
+function AboutButtonClicked(){
+
 }

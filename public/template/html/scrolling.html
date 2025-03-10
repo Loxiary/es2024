@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../../images/png/logo-title.png" />
     <link rel="stylesheet" href="../../template/css/scrolling.css">
+    <script src="../../template/js/windowManager.js" defer></script>
     <title>Effet Doppler</title>
 </head>
 <body>
@@ -12,6 +14,7 @@
     
     <div class="mobile_nav_div" id="mobile-nav-div">
         <div class="mobile_btns_div">
+            <button id="Home" onclick="HomeButtonClicked()" class="active">Home</button>
             <button id="Tout le contenu" onclick="ToContentWindow()">Tout le contenu</button>
             <button id="Galerie" onclick="GaleryButtonClicked()">Galerie</button>
             <button id="Sources" onclick="SourceButtonClicked()">Sources</button>
@@ -21,6 +24,7 @@
 
     <nav>
         <ul>
+            <li><a onclick="HomeButtonClicked()" class="active">Home</a></li>
             <li><a onclick="ToContentWindow()">Tout le contenu</a></li>
             <li><a onclick="GaleryButtonClicked()">Galerie</a></li>
             <li><a onclick="SourceButtonClicked()">Sources</a></li>

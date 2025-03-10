@@ -19,6 +19,10 @@ app.get('/content', (req, res) => {
     res.sendFile(path.join(__dirname + '/public/template/html/index.html'));
 });
 
+app.get('/sources', (req, res) => {
+    res.sendFile(path.join(__dirname + '/public/template/html/sources.html'));
+});
+
 app.post('/update-username', (req, res) => {
   const username = os.userInfo().username;
 

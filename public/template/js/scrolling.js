@@ -43,22 +43,6 @@ function updateParallax() {
     }, 0);
 }
 
-function ToContentWindow(){
-    window.location.href = 'content/';
-}
-
 function ToggleNavbar(){
     document.getElementById("mobile-nav-div").classList.toggle("show")
-}
-
-function GaleryButtonClicked(){
-    window.location.href = 'galery/';
-}
-
-function SourceButtonClicked(){
-    window.location.href = 'sources/';
-}
-
-function AboutButtonClicked(){
-    window.location.href = 'about/';
 }

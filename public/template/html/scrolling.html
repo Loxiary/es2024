@@ -12,21 +12,19 @@
     
     <div class="mobile_nav_div" id="mobile-nav-div">
         <div class="mobile_btns_div">
-            <button id="Home">Home</button>
-            <button id="Tout le contenu">Tout le contenu</button>
-            <button id="Galerie">Galerie</button>
-            <button id="Sources">Sources</button>
-            <button id="À propos">À propos</button>
+            <button id="Tout le contenu" onclick="ToContentWindow()">Tout le contenu</button>
+            <button id="Galerie" onclick="GaleryButtonClicked()">Galerie</button>
+            <button id="Sources" onclick="SourceButtonClicked()">Sources</button>
+            <button id="À propos" onclick="AboutButtonClicked()">À propos</button>
         </div>
     </div>
 
     <nav>
         <ul>
-            <li>Home</li>
             <li><a onclick="ToContentWindow()">Tout le contenu</a></li>
-            <li>Galerie</li>
-            <li>Sources</li>
-            <li>À propos</li>
+            <li><a onclick="GaleryButtonClicked()">Galerie</a></li>
+            <li><a onclick="SourceButtonClicked()">Sources</a></li>
+            <li><a onclick="AboutButtonClicked()">À propos</a></li>
         </ul>
     </nav>
 

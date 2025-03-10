@@ -48,21 +48,17 @@ function ToContentWindow(){
 }
 
 function ToggleNavbar(){
-        document.getElementById("mobile-nav-div").classList.toggle("show")
-}
-
-function HomeButtonClicked(){
-
+    document.getElementById("mobile-nav-div").classList.toggle("show")
 }
 
 function GaleryButtonClicked(){
-
+    window.location.href = 'galery/';
 }
 
 function SourceButtonClicked(){
-
+    window.location.href = 'sources/';
 }
 
 function AboutButtonClicked(){
-
+    window.location.href = 'about/';
 }

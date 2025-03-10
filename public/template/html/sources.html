@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../../images/png/logo-title.png" />
-    <title>Sources</title>
+    <link rel="stylesheet" href="../../template/css/sources.css">
+    <script src="../../template/js/scrolling.js" defer></script>
+    <title>Effet Doppler - Sources</title>
 </head>
 <body>
+    <button id="navbar-btn" onclick="ToggleNavbar()">≡</button>
     
+    <div class="mobile_nav_div" id="mobile-nav-div">
+        <div class="mobile_btns_div">
+            <button id="Tout le contenu" onclick="ToContentWindow()">Tout le contenu</button>
+            <button id="Galerie" onclick="GaleryButtonClicked()">Galerie</button>
+            <button id="Sources" onclick="SourceButtonClicked()">Sources</button>
+            <button id="À propos" onclick="AboutButtonClicked()">À propos</button>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a onclick="ToContentWindow()">Tout le contenu</a></li>
+            <li><a onclick="GaleryButtonClicked()">Galerie</a></li>
+            <li><a onclick="SourceButtonClicked()">Sources</a></li>
+            <li><a onclick="AboutButtonClicked()">À propos</a></li>
+        </ul>
+    </nav>
 </body>
 </html>

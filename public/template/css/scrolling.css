@@ -41,9 +41,6 @@ nav li{
     border-radius: 10000px;
     font-size: 1rem;
     transition: all 250ms ease-in-out;
-}
-
-nav li:nth-child(3){
     color: #16285b;
 }
 

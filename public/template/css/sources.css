@@ -126,6 +126,13 @@ main{
     text-align: left;
     color: #ffffff;
     transition: all 150ms ease-in-out;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.mobile_btns_div button svg{
+    
 }
 
 .mobile_btns_div button.active{

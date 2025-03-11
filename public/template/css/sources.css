@@ -41,6 +41,16 @@ nav li{
     color: #ffffff;
 }
 
+nav li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li a svg{
+    margin-right: 1em;
+}
+
 nav li:hover{
     cursor: pointer;
     transform: scale(1.1);
@@ -132,7 +142,8 @@ main{
 }
 
 .mobile_btns_div button svg{
-    
+    margin: auto 0;
+    margin-right: 1em;
 }
 
 .mobile_btns_div button.active{

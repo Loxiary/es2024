@@ -44,11 +44,31 @@ nav li{
     color: #16285b;
 }
 
+nav li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li a svg{
+    margin-right: 1em;
+    fill: #16285b;
+    transition: all 150ms ease-in-out;
+}
+
+nav li .active{
+    text-decoration: underline;
+}
+
 nav li:hover{
     cursor: pointer;
     transform: scale(1.1);
     background-color: #283054;
     color: #ffffff;
+
+    a svg{
+        fill: #ffffff;
+    }
 }
 
 .title_div{
@@ -166,6 +186,11 @@ nav li:hover{
     color: #ffffff;
 }
 
+.mobile_btns_div button svg{
+    margin: auto 0;
+    margin-right: 1em;
+}
+
 .mobile_nav_div{
     position: absolute;
     left: 0;
@@ -210,6 +235,9 @@ nav li:hover{
     text-align: left;
     color: #ffffff;
     transition: all 150ms ease-in-out;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .mobile_btns_div button.active{

@@ -23,6 +23,10 @@ app.get('/sources', (req, res) => {
     res.sendFile(path.join(__dirname + '/public/template/html/sources.html'));
 });
 
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname + '/public/template/html/about.html'));
+});
+
 app.post('/update-username', (req, res) => {
   const username = os.userInfo().username;
 

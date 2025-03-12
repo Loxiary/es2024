@@ -11,7 +11,7 @@ body{
     font-family: "Poppins", serif;
     background: rgb(85,81,186);
     background: linear-gradient(0deg, rgba(85,81,186,1) 0%, rgba(124,116,204,1) 50%, rgba(37,38,146,1) 100%);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 nav{

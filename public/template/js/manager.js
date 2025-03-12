@@ -23,25 +23,3 @@ function showSection(section){
     const activeSection = document.getElementById(`section-${section}`);
     if (activeSection) activeSection.style.display = 'block';
 }
-
-// function updateUsername(){
-//     fetch('/update-username', {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         })
-//         .then(response => response.json())
-//         .then(data => {
-//         if (data.success) {
-//             usernameText.textContent = "Menu";
-//             console.log("username update done")
-//         } else {
-//             console.log("username update failed")
-//             console.error(data.message);
-//         }
-//     }).catch(error => {
-//         console.error('Erreur:', error)
-//         console.log("username update error catched")
-//     });
-// }

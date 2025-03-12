@@ -81,7 +81,6 @@ app.post('/api/log', (req, res) => {
 
     // Ajouter le log à la fin du fichier
     fs.appendFile(logFilePath, logEntry, (err) => {
-        console.log("creation du fichier")
         if (err) {
             console.error('Erreur lors de l’écriture du log:', err);
             return res.status(500).json({ error: 'Erreur serveur' });

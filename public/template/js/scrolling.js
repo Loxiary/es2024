@@ -61,7 +61,6 @@ function ToggleNavbar(){
 }
 
 function ToggleQuiz(){
-    console.log("quiz init")
     if(!document.getElementById("quiz-modal-div")){
 
         // QUIZ BASE 
@@ -197,7 +196,6 @@ function LoadQuestion(){
     for(let i = 0; i < 4; i++){
         let btn = document.getElementById(`button_0${i}`)
         if(btn.data == "answer"){
-            console.log(btn)
         }
     }
 
@@ -269,12 +267,11 @@ function ValideAnswer(button) {
         })
     })
     .then(response => response.json())
-    .then(data => console.log('Log enregistré:', data))
     .catch(error => console.error('Erreur:', error));
 
     // Charger la question suivante après un délai
     questionID++;
-    setTimeout(LoadQuestion, 500);
+    setTimeout(LoadQuestion, 3000);
 }
 
 

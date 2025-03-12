@@ -835,7 +835,7 @@ nav li:hover{
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     margin-top: 5em;
-    margin-bottom: 5em;
+    margin-bottom: 2em;
 }
 
 .section_bonus .content_01 img{
@@ -870,6 +870,26 @@ nav li:hover{
 
 .quiz_button:hover{
     transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+/* FOOTER */
+
+footer{
+    margin-top: 5em;
+    height: 10%;
+    background-color: #16285b;
+    padding: 1em 20em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer img{
+    margin-right: 5em;
+    height: 80%;
 }
 
 @media(max-width: 1600px){

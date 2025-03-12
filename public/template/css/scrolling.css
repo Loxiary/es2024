@@ -987,6 +987,10 @@ footer img{
     background-color: #185b16;
 }
 
+.quiz_content_buttons.wrong{
+    background-color: #5b1616;
+}
+
 #quiz-header-title{
     margin: 0 auto;
     text-align: center;

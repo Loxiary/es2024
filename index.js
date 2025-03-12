@@ -49,6 +49,41 @@ app.get('/api/quiz', (req, res) => {
     });
 });
 
+app.post('/api/log', (req, res) => {
+    const { question, userAnswer, correctAnswer, isMistake, score } = req.body;
+
+    if (!question || !userAnswer || !correctAnswer || isMistake || score === undefined) {
+        return res.status(400).json({ error: 'Données invalides' });
+    }
+
+    let clientIP = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+
+    // Prendre seulement la première IP si plusieurs sont listées
+    clientIP = clientIP.split(',')[0].trim();
+
+    // Nettoyer l'IP (gérer les cas IPv6 ::ffff:192.168.1.1)
+    clientIP = clientIP.replace(/^::ffff:/, '').replace(/[:.]/g, '_');
+    const logFilePath = path.join(__dirname, `logs/${clientIP}.txt`);
+
+    // Assurer l'existence du dossier logs
+    if (!fs.existsSync('logs')) {
+        fs.mkdirSync('logs');
+    }
+
+    // Format du log
+    const timestamp = new Date().toISOString().replace('T', ' ').split('.')[0]; // Format lisible
+    const logEntry = `[LOG] [${timestamp}] - : ${question} | ${userAnswer} | ${correctAnswer} | ${isMistake} | ${score}\n`;
+
+    // Ajouter le log à la fin du fichier
+    fs.appendFile(logFilePath, logEntry, (err) => {
+        if (err) {
+            console.error('Erreur lors de l’écriture du log:', err);
+            return res.status(500).json({ error: 'Erreur serveur' });
+        }
+        res.json({ success: true, message: 'Log enregistré avec succès' });
+    });
+});
+
 app.post('/update-username', (req, res) => {
   const username = os.userInfo().username;
 

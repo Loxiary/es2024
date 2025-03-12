@@ -82,6 +82,10 @@ function ToggleQuiz(){
 
         // QUIZ HEADER
 
+        let quizHeaderTitle = document.createElement("h2")
+        quizHeaderTitle.id = "quiz-title"
+        quizHeaderTitle.textContent = "Quiz"
+
         let quizHeaderNbLabel = document.createElement("span")
         quizHeaderNbLabel.id = "quiz-header-number-label"
         quizHeaderNbLabel.textContent = "Question n°6"
@@ -94,6 +98,7 @@ function ToggleQuiz(){
         quizHeaderDifficultyLabel.id = "quiz-header-difficulty-label"
         quizHeaderDifficultyLabel.textContent = "Difficulté : Facile"
 
+        quizHeader.appendChild(quizHeaderTitle)
         quizHeader.appendChild(quizHeaderNbLabel)
         quizHeader.appendChild(quizHeaderQuestionLabel)
         quizHeader.appendChild(quizHeaderDifficultyLabel)

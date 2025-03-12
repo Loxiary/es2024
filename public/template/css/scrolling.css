@@ -304,10 +304,6 @@ nav li:hover{
     margin: 0 3em;
 }
 
-.section_first_part .content_01 span span{
-    padding-top: 5em;
-}
-
 .content_02{
     padding: 0 5em;
 }
@@ -353,10 +349,6 @@ nav li:hover{
 
 .section_first_part .content_02 .text{
 
-}
-
-.section_first_part .content_02 span span{
-    padding-top: 5em;
 }
 
 .section_first_part .border{
@@ -499,7 +491,7 @@ nav li:hover{
 
 .section_second_part .content_02{
     display: grid;
-    grid-template-columns: 50% auto auto;
+    grid-template-columns: 60% auto auto;
     margin-top: 5em;
     margin-bottom: 5em;
 }
@@ -515,6 +507,28 @@ nav li:hover{
     flex-direction: column;
 }
 .section_second_part .content_02 .separation_line{
+    height: 100%;
+    width: 1px;
+    background-color: #16285b;
+    margin: 0 3em;
+}
+
+.section_second_part .content_03{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.section_second_part .content_03 img{
+    width: 100%;
+}
+
+.section_second_part .content_03 .img_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.section_second_part .content_03 .separation_line{
     height: 100%;
     width: 1px;
     background-color: #16285b;

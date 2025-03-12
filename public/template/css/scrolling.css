@@ -443,6 +443,7 @@ nav li:hover{
     position: relative;
     margin: 2.5em 20em;
     margin-bottom: 0;
+    padding-bottom: 1em;
 }
 
 .mid_part_text{

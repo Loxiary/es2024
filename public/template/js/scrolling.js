@@ -74,6 +74,8 @@ function ToggleQuiz(){
         let quizCloseButton = document.createElement("button")
         quizCloseButton.id = "quiz-close-button"
         quizCloseButton.textContent = "x"
+        quizCloseButton.onclick = function(){
+            ToggleQuiz()}
 
         // QUIZ DISCLAIMER
 
@@ -144,6 +146,6 @@ function ToggleQuiz(){
 
         document.body.appendChild(quizModalDiv)
     }else{
-        document.body.removeChild(document.getElementById("nav-modal-div"))
+        document.body.removeChild(document.getElementById("quiz-modal-div"))
     }
 }

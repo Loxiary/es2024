@@ -1012,6 +1012,28 @@ footer img{
     display: none;
 }
 
+#quiz-close-button{
+    position: absolute;
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 1000px;
+    border: none;
+    background-color: rgb(176, 12, 12);
+    font-family: Poppins;
+    font-weight: 700;
+    color: #ffffff;
+    right: 0;
+    transform: translate(25%, -25%);
+    transition: all 150ms ease-in-out;
+}
+
+#quiz-close-button:hover{
+    background-color: white;
+    color: rgb(176, 12, 12);
+    border: 1px solid rgb(176, 12, 12);
+    cursor: pointer;
+}
+
 @media(max-width: 1600px){
     .section_first_part{
         margin: 10em 15em;

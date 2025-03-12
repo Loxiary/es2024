@@ -172,7 +172,17 @@ function LoadQuestion(){
     const questionLabel = document.getElementById("quiz-header-question-label")
     const questionNumberLabel = document.getElementById("quiz-header-number-label")
     const difficultyLabel = document.getElementById("quiz-header-difficulty-label")
+    const quizContent = document.getElementById("quiz-content")
+    const quizBottom = document.getElementById("quiz-bottom")
     
+    if(questionID == 15){
+        questionLabel.textContent = "Félicitations vous avez fini le quiz. Score : " + score + "/ 15"
+        questionNumberLabel.style.display = "none"
+        difficultyLabel.style.display = "none"
+        quizContent.style.display = "none"
+        quizBottom.style.display = "none"
+    }
+
     questionLabel.textContent = jsonData[questionID].question;
     questionNumberLabel.textContent = `Question n°${questionID+1}`;
     difficultyLabel.textContent = `Difficulté : ${jsonData[questionID].difficulty}`;
@@ -220,42 +230,53 @@ function CheckValidity(){
     }
 }
 
-function ValideAnswer(button){
+function ValideAnswer(button) {
+    let question = jsonData[questionID].question;
+    let userAnswer = button.textContent;
+    let correctAnswer = jsonData[questionID].answer;
     let isCorrectAnswer = false;
-    let question = jsonData[questionID].question
-    let userAnswer = button.textContent
-    let correctAnswer = jsonData[questionID].answer
-    console.log("valide answer called")
-    if(button.data == "answer"){
-        console.log(button)
-        console.log(button.data)
-        button.textContent = "VRAI !"
-        correctAnswer = true;
-    }else{
-        console.log(button)
-        console.log(button.data)
-        button.classList.remove("chosen")
-        button.classList.add("wrong")
-        button.textContent = "FAUX !"
-        for(let i = 0; i < 4; i++){
-            let button = document.getElementById(`button_0${i}`)
-            if(button.data == "answer"){
-                button.classList.add("chosen")
+
+    // Mise à jour du bouton et de l'affichage
+    if (button.data == "answer") {
+        button.textContent = "VRAI !";
+        button.classList.add("correct");
+        isCorrectAnswer = true;
+        score = score + 1
+    } else {
+        button.classList.remove("chosen");
+        button.classList.add("wrong");
+        button.textContent = "FAUX !";
+        
+        // Mettre en évidence la bonne réponse
+        for (let i = 0; i < 4; i++) {
+            let btn = document.getElementById(`button_0${i}`);
+            if (btn.data == "answer") {
+                btn.classList.add("chosen");
             }
         }
     }
+
+    // Envoi des données au backend
     fetch('http://localhost:3000/api/log', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({question, userAnswer, correctAnswer, isCorrectAnswer, score })
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            question,
+            userAnswer,
+            correctAnswer,
+            isMistake: !isCorrectAnswer, // Inversé pour correspondre à la logique backend
+            score
+        })
     })
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => console.log('Log enregistré:', data))
     .catch(error => console.error('Erreur:', error));
 
-    questionID = questionID + 1
-    setTimeout(LoadQuestion, 3000)
+    // Charger la question suivante après un délai
+    questionID++;
+    setTimeout(LoadQuestion, 500);
 }
+
 
 function getKeyByValue(object, value) {
     return Object.keys(object).find(key => object[key] === value);

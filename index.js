@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path')
 const os = require("os")
+const axios = require('axios');
 
 const app = express();
 app.use(cookieParser());
@@ -52,17 +53,21 @@ app.get('/api/quiz', (req, res) => {
 app.post('/api/log', (req, res) => {
     const { question, userAnswer, correctAnswer, isMistake, score } = req.body;
 
-    if (!question || !userAnswer || !correctAnswer || isMistake || score === undefined) {
+    if (!question || !userAnswer || !correctAnswer || isMistake === undefined || score === undefined) {
         return res.status(400).json({ error: 'Données invalides' });
     }
 
-    let clientIP = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    // Récupérer l'IP publique du client
+    let clientIP = req.headers['x-forwarded-for'] || req.socket.remoteAddress || 'unknown';
 
-    // Prendre seulement la première IP si plusieurs sont listées
-    clientIP = clientIP.split(',')[0].trim();
+    // Si l'IP est "::1" ou "127.0.0.1", c'est du localhost
+    if (clientIP === '::1' || clientIP === '127.0.0.1') {
+        clientIP = 'localhost';
+    }
 
-    // Nettoyer l'IP (gérer les cas IPv6 ::ffff:192.168.1.1)
-    clientIP = clientIP.replace(/^::ffff:/, '').replace(/[:.]/g, '_');
+    // Nettoyer l'IP pour un nom de fichier valide
+    clientIP = clientIP.split(',')[0].trim().replace(/[:.]/g, '_');
+
     const logFilePath = path.join(__dirname, `logs/${clientIP}.txt`);
 
     // Assurer l'existence du dossier logs
@@ -76,11 +81,12 @@ app.post('/api/log', (req, res) => {
 
     // Ajouter le log à la fin du fichier
     fs.appendFile(logFilePath, logEntry, (err) => {
+        console.log("creation du fichier")
         if (err) {
             console.error('Erreur lors de l’écriture du log:', err);
             return res.status(500).json({ error: 'Erreur serveur' });
         }
-        res.json({ success: true, message: 'Log enregistré avec succès' });
+        res.json({ success: true, message: `Log enregistré avec succès dans ${clientIP}.txt` });
     });
 });
 

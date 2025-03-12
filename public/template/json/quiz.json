@@ -5,7 +5,8 @@
         "answer": "Une propagation de perturbation",
         "fakeAnswer1": "Un déplacement de matière",
         "fakeAnswer2": "Un courant électrique",
-        "fakeAnswer3": "Un mouvement aléatoire"
+        "fakeAnswer3": "Un mouvement aléatoire",
+        "difficulty": "Facile"
     },
     {
         "id": 1, 
@@ -13,7 +14,8 @@
         "answer": "Elles sont inversement proportionnelles",
         "fakeAnswer1": "Elles sont indépendantes",
         "fakeAnswer2": "Elles sont proportionnelles",
-        "fakeAnswer3": "La longueur d’onde est toujours plus grande que la fréquence"
+        "fakeAnswer3": "La longueur d’onde est toujours plus grande que la fréquence",
+        "difficulty": "Moyenne"
     },
     {
         "id": 2, 
@@ -21,7 +23,8 @@
         "answer": "Hertz (Hz) et mètre (m)",
         "fakeAnswer1": "Joule (J) et seconde (s)",
         "fakeAnswer2": "Pascal (Pa) et Newton (N)",
-        "fakeAnswer3": "Kelvin (K) et ampère (A)"
+        "fakeAnswer3": "Kelvin (K) et ampère (A)",
+        "difficulty": "Moyenne"
     },
     {
         "id": 3, 
@@ -29,7 +32,8 @@
         "answer": "La fréquence",
         "fakeAnswer1": "L’amplitude",
         "fakeAnswer2": "La longueur d’onde",
-        "fakeAnswer3": "La vitesse de propagation"
+        "fakeAnswer3": "La vitesse de propagation",
+        "difficulty": "Difficile"
     },
     {
         "id": 4, 
@@ -37,7 +41,8 @@
         "answer": "Condensation",
         "fakeAnswer1": "Réflexion",
         "fakeAnswer2": "Absorption",
-        "fakeAnswer3": "Diffraction"
+        "fakeAnswer3": "Diffraction",
+        "difficulty": "Difficile"
     },
     {
         "id": 5, 
@@ -45,7 +50,8 @@
         "answer": "La fréquence perçue d’une onde",
         "fakeAnswer1": "La vitesse de propagation de l’onde",
         "fakeAnswer2": "La masse de l’émetteur",
-        "fakeAnswer3": "L’amplitude de l’onde"
+        "fakeAnswer3": "L’amplitude de l’onde",
+        "difficulty": "Facile"
     },
     {
         "id": 6, 
@@ -53,7 +59,8 @@
         "answer": "Augmente",
         "fakeAnswer1": "Diminue",
         "fakeAnswer2": "Reste constante",
-        "fakeAnswer3": "Devient infinie"
+        "fakeAnswer3": "Devient infinie",
+        "difficulty": "Moyenne"
     },
     {
         "id": 7, 
@@ -61,7 +68,8 @@
         "answer": "Un objet qui s’éloigne",
         "fakeAnswer1": "Un objet qui se rapproche",
         "fakeAnswer2": "Une variation d’intensité lumineuse",
-        "fakeAnswer3": "Une réflexion sur un corps céleste"
+        "fakeAnswer3": "Une réflexion sur un corps céleste",
+        "difficulty": "Moyenne"
     },
     {
         "id": 8, 
@@ -69,7 +77,8 @@
         "answer": "Echographie",
         "fakeAnswer1": "Radiographie",
         "fakeAnswer2": "IRM",
-        "fakeAnswer3": "Scanner cérébral"
+        "fakeAnswer3": "Scanner cérébral",
+        "difficulty": "Difficile"
     },
     {
         "id": 9, 
@@ -77,7 +86,8 @@
         "answer": "Christian Doppler",
         "fakeAnswer1": "Albert Einstein",
         "fakeAnswer2": "Isaac Newton",
-        "fakeAnswer3": "Heinrich Hertz"
+        "fakeAnswer3": "Heinrich Hertz",
+        "difficulty": "Difficile"
     },
     {
         "id": 10, 
@@ -85,7 +95,8 @@
         "answer": "La fréquence du son",
         "fakeAnswer1": "La température de l’air",
         "fakeAnswer2": "La résistance électrique",
-        "fakeAnswer3": "L’humidité de l’air"
+        "fakeAnswer3": "L’humidité de l’air",
+        "difficulty": "Facile"
     },
     {
         "id": 11, 
@@ -93,7 +104,8 @@
         "answer": "Un capteur de fréquence ou un microphone",
         "fakeAnswer1": "Un oscilloscope",
         "fakeAnswer2": "Un baromètre",
-        "fakeAnswer3": "Un thermomètre"
+        "fakeAnswer3": "Un thermomètre",
+        "difficulty": "Moyenne"
     },
     {
         "id": 12, 
@@ -101,7 +113,8 @@
         "answer": "Car seule une source en mouvement modifie la fréquence perçue",
         "fakeAnswer1": "Car une source immobile n’émet pas de son",
         "fakeAnswer2": "Car l’air modifie les fréquences sonores",
-        "fakeAnswer3": "Car la lumière affecte le son"
+        "fakeAnswer3": "Car la lumière affecte le son",
+        "difficulty": "Moyenne"
     },
     {
         "id": 13, 
@@ -109,7 +122,8 @@
         "answer": "En comparant la fréquence mesurée avec la fréquence initiale",
         "fakeAnswer1": "En mesurant une augmentation d’amplitude",
         "fakeAnswer2": "En observant une variation de vitesse",
-        "fakeAnswer3": "En mesurant la température du milieu"
+        "fakeAnswer3": "En mesurant la température du milieu",
+        "difficulty": "Difficile"
     },
     {
         "id": 14, 
@@ -117,6 +131,7 @@
         "answer": "Analyse spectrale des fréquences",
         "fakeAnswer1": "Analyse de la vitesse du vent",
         "fakeAnswer2": "Analyse de la pression atmosphérique",
-        "fakeAnswer3": "Analyse de Ramses II"
+        "fakeAnswer3": "Analyse de Ramses II",
+        "difficulty": "Difficile"
     }
 ]

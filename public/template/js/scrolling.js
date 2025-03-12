@@ -8,6 +8,8 @@ const bat_4 = document.getElementById("bat_4");
 const birds = document.getElementById("birds");
 const separator = document.getElementById("separator-3d")
 
+let questionID = 0;
+let questionNumber = 0;
 let multiplier = 0.5
 
 let btns = ["Home", "Tout le contenu", "Galerie", "Sources", "À propos"]
@@ -148,4 +150,10 @@ function ToggleQuiz(){
     }else{
         document.body.removeChild(document.getElementById("quiz-modal-div"))
     }
+}
+
+function LoadQuestion(){
+    const questionLabel = document.getElementById("quiz-header-question-label")
+    const questionNumberLabel = document.getElementById("quiz-header-number-label")
+    const difficultyLabel = document.getElementById("quiz-header-number-label")
 }

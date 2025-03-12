@@ -62,6 +62,12 @@ function ToggleQuiz(){
         quizDiv.className = "quiz_div"
         quizModalDiv.appendChild(quizDiv)
 
+        // QUIZ DISCLAIMER
+
+        let quizDisclaimer = document.createElement("p")
+        quizDisclaimer.id = "quiz-disclaimer"
+        quizDisclaimer.textContent = "Erreur de dimension : Merci de faire ce quiz avec votre téléphone à l'horizontale ou d'agrandir verticalement votre fenêtre !"
+
         // QUIZ BODY
 
         let quizHeader = document.createElement("div")
@@ -76,6 +82,7 @@ function ToggleQuiz(){
         quizBottom.id = "quiz-bottom"
         quizBottom.className = "quiz_bottom"
 
+        quizDiv.appendChild(quizDisclaimer)
         quizDiv.appendChild(quizHeader)
         quizDiv.appendChild(quizContent)
         quizDiv.appendChild(quizBottom)

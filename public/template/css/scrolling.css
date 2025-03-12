@@ -590,6 +590,128 @@ nav li:hover{
     margin: 0 3em;
 }
 
+
+/* SECTION THIRD PART */
+
+.section_third_part .border{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: 1em;
+    border: #16285b 1px solid;
+}
+
+.section_third_part{
+    height: fit-content;
+    color: #16285b;
+    position: relative;
+    margin: 2.5em 20em;
+    margin-bottom: 0;
+    padding-bottom: 1em;
+}
+
+.section_third_part h2{
+    margin-bottom: 3em;
+    text-align: center;
+    text-decoration: underline;
+    position: relative;
+    margin: 0 2em;
+    margin-bottom: 3em;
+    text-align: center;
+    text-decoration: underline;
+    background-color: #ffffff;
+    border: #16285b 1px solid;
+    z-index: 2;
+}
+
+.section_third_part .content_01{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.section_third_part .content_01 img{
+    width: 100%;
+}
+
+.section_third_part .content_01 .img_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.section_third_part .content_01 .separation_line{
+    height: 100%;
+    width: 1px;
+    background-color: #16285b;
+    margin: 0 3em;
+}
+
+.section_third_part .content_02{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.section_third_part .content_02 img{
+    width: 100%;
+}
+
+.section_third_part .content_02 .img_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.section_third_part .content_02 .separation_line{
+    height: 100%;
+    width: 1px;
+    background-color: #16285b;
+    margin: 0 3em;
+}
+
+.section_third_part .content_03{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.section_third_part .content_03 img{
+    width: 100%;
+}
+
+.section_third_part .content_03 .img_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.section_third_part .content_03 .separation_line{
+    height: 100%;
+    width: 1px;
+    background-color: #16285b;
+    margin: 0 3em;
+}
+
+.section_third_part .content_04{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.section_third_part .content_04 img{
+    width: 100%;
+}
+
+.section_third_part .content_04 .img_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.section_third_part .content_04 .separation_line{
+    height: 100%;
+    width: 1px;
+    background-color: #16285b;
+    margin: 0 3em;
+}
+
 @media(max-width: 1600px){
     .section_first_part{
         margin: 10em 15em;

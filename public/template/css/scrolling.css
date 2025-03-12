@@ -490,11 +490,15 @@ nav li:hover{
     .section_first_part .content_01 .separation_line{
         height: 1px;
         width: 100%;
-        background-color: white;
+        background-color: #16285b;
         margin: 3em 0;
     }
 
     .content_02{
+        padding: 0 5em;
+    }
+
+    .content_03{
         padding: 0 5em;
     }
 
@@ -507,7 +511,20 @@ nav li:hover{
     .section_first_part .content_02 .separation_line{
         height: 1px;
         width: 100%;
-        background-color: white;
+        background-color: #16285b;
+        margin: 3em 0;
+    }
+
+    .section_first_part .content_04{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto auto;
+    }
+
+    .section_first_part .content_04 .separation_line{
+        height: 1px;
+        width: 100%;
+        background-color: #16285b;
         margin: 3em 0;
     }
     
@@ -539,6 +556,14 @@ nav li:hover{
     }
 
     .content_02{
+        padding: 0 7.5em;
+    }
+
+    .content_03{
+        padding: 0 7.5em;
+    }
+
+    .content_04{
         padding: 0 7.5em;
     }
 }
@@ -580,6 +605,14 @@ nav li:hover{
     .content_02{
         padding: 0 2.5em;
     }
+
+    .content_03{
+        padding: 0 2.5em;
+    }
+
+    .content_04{
+        padding: 0 2.5em;
+    }
 }
 
 @media(max-width: 530px){
@@ -612,6 +645,14 @@ nav li:hover{
     }
 
     .content_02{
+        padding: 0 2.5em;
+    }
+
+    .content_03{
+        padding: 0 2.5em;
+    }
+
+    .content_04{
         padding: 0 2.5em;
     }
 }

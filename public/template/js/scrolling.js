@@ -47,3 +47,75 @@ function updateParallax() {
 function ToggleNavbar(){
     document.getElementById("mobile-nav-div").classList.toggle("show")
 }
+
+function ToggleQuiz(){
+    console.log("quiz init")
+    if(!document.getElementById("quiz-modal-div")){
+
+        // QUIZ BASE 
+        let quizModalDiv = document.createElement("div")
+        quizModalDiv.id = "quiz-modal-div"
+        quizModalDiv.className = "quiz_modal_div"
+
+        let quizDiv = document.createElement("div")
+        quizDiv.id = "quiz-div"
+        quizDiv.className = "quiz_div"
+        quizModalDiv.appendChild(quizDiv)
+
+        // QUIZ BODY
+
+        let quizHeader = document.createElement("div")
+        quizHeader.id = "quiz-header"
+        quizHeader.className = "quiz_header"
+
+        let quizContent = document.createElement("div")
+        quizContent.id = "quiz-content"
+        quizContent.className = "quiz_content"
+
+        let quizBottom = document.createElement("div")
+        quizBottom.id = "quiz-bottom"
+        quizBottom.className = "quiz_bottom"
+
+        quizDiv.appendChild(quizHeader)
+        quizDiv.appendChild(quizContent)
+        quizDiv.appendChild(quizBottom)
+
+        // QUIZ HEADER
+
+        let quizHeaderNbLabel = document.createElement("span")
+        quizHeaderNbLabel.id = "quiz-header-number-label"
+        quizHeaderNbLabel.textContent = "Question n°6"
+
+        let quizHeaderQuestionLabel = document.createElement("span")
+        quizHeaderQuestionLabel.id = "quiz-header-question-label"
+        quizHeaderQuestionLabel.textContent = "Ici s'affiche le contenu de la question"
+
+        let quizHeaderDifficultyLabel = document.createElement("span")
+        quizHeaderDifficultyLabel.id = "quiz-header-difficulty-label"
+        quizHeaderDifficultyLabel.textContent = "Difficulté : Facile"
+
+        quizHeader.appendChild(quizHeaderNbLabel)
+        quizHeader.appendChild(quizHeaderQuestionLabel)
+        quizHeader.appendChild(quizHeaderDifficultyLabel)
+
+        // QUIZ CONTENT
+
+        for(let i = 0; i < 4; i++){
+            let btn = document.createElement("button")
+            btn.id = `button_0${i}`
+            btn.className = "quiz_content_buttons"
+            btn.textContent = `Button : ${i}`
+            quizContent.appendChild(btn)
+        }
+
+        // QUIZ BOTTOM
+
+        let btn = document.createElement("button")
+        btn.id = "quiz-validate-btn"
+        btn.className = "quiz_validate_btn"
+        btn.textContent = "Valider"
+        quizBottom.appendChild(btn)
+
+        document.body.appendChild(quizModalDiv)
+    }
+}

@@ -911,8 +911,9 @@ footer img{
     background-color: red;
     height: 65%;
     width: 25%;
-
 }
+
+
 
 @media(max-width: 1600px){
     .section_first_part{

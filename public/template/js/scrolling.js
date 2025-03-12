@@ -83,7 +83,7 @@ function ToggleQuiz(){
         // QUIZ HEADER
 
         let quizHeaderTitle = document.createElement("h2")
-        quizHeaderTitle.id = "quiz-title"
+        quizHeaderTitle.id = "quiz-header-title"
         quizHeaderTitle.textContent = "Quiz"
 
         let quizHeaderNbLabel = document.createElement("span")

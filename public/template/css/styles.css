@@ -10,7 +10,6 @@ body{
     height: 100vh;
     font-family: "Poppins", serif;
     background-color: #380c34;
-    overflow: hidden;
 }
 
 .main-div{

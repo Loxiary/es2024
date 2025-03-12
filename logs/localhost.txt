@@ -1,0 +1,32 @@
+[LOG] [2025-03-12 22:04:28] - : Qu’est-ce qu’une onde ? | Un déplacement de matière | Une propagation de perturbation | true | 0
+[LOG] [2025-03-12 22:05:05] - : Quelle est la relation entre fréquence et longueur d’onde pour une onde donnée ? | Elles sont proportionnelles | Elles sont inversement proportionnelles | true | 0
+[LOG] [2025-03-12 22:15:40] - : Qu’est-ce qu’une onde ? | Un déplacement de matière | Une propagation de perturbation | true | 0
+[LOG] [2025-03-12 22:15:45] - : Quelle est la relation entre fréquence et longueur d’onde pour une onde donnée ? | Elles sont proportionnelles | Elles sont inversement proportionnelles | true | 0
+[LOG] [2025-03-12 22:15:49] - : Quelles sont les unités de la fréquence et de la longueur d’onde dans le Système International ? | Hertz (Hz) et mètre (m) | Hertz (Hz) et mètre (m) | false | 0
+[LOG] [2025-03-12 22:15:54] - : Quelle propriété des ondes ne change pas lors d’un changement de milieu ? | La vitesse de propagation | La fréquence | true | 0
+[LOG] [2025-03-12 22:15:58] - : Parmi ces phénomènes, lequel n'est pas une interaction d’ondes ? | Absorption | Condensation | true | 0
+[LOG] [2025-03-12 22:16:02] - : L’effet Doppler est une variation de : | La vitesse de propagation de l’onde | La fréquence perçue d’une onde | true | 0
+[LOG] [2025-03-12 22:16:06] - : Lorsque la source sonore s’approche d’un observateur, la fréquence perçue : | Reste constante | Augmente | true | 0
+[LOG] [2025-03-12 22:16:10] - : Le décalage vers le rouge en astronomie est dû à : | Un objet qui se rapproche | Un objet qui s’éloigne | true | 0
+[LOG] [2025-03-12 22:16:14] - : Quel domaine médical utilise l’effet Doppler pour l’imagerie ? | Scanner cérébral | Echographie | true | 0
+[LOG] [2025-03-12 22:16:18] - : Quel scientifique a formulé l’effet Doppler pour la première fois ? | Albert Einstein | Christian Doppler | true | 0
+[LOG] [2025-03-12 22:16:21] - : Dans l’expérience, quelle grandeur est mesurée pour observer l’effet Doppler ? | L’humidité de l’air | La fréquence du son | true | 0
+[LOG] [2025-03-12 22:16:25] - : Quel matériel est nécessaire pour enregistrer la variation de fréquence d’une source sonore mobile ? | Un baromètre | Un capteur de fréquence ou un microphone | true | 0
+[LOG] [2025-03-12 22:16:29] - : Pourquoi est-il important d’avoir une source sonore en mouvement pour observer l’effet Doppler ? | Car une source immobile n’émet pas de son | Car seule une source en mouvement modifie la fréquence perçue | true | 0
+[LOG] [2025-03-12 22:16:33] - : En analysant les données, comment peut-on déterminer si la source s’éloigne ou se rapproche ? | En observant une variation de vitesse | En comparant la fréquence mesurée avec la fréquence initiale | true | 0
+[LOG] [2025-03-12 22:16:38] - : Quel type d’analyse logicielle peut être utilisée pour exploiter les résultats expérimentaux ? | Analyse spectrale des fréquences | Analyse spectrale des fréquences | false | 0
+[LOG] [2025-03-12 22:17:33] - : Qu’est-ce qu’une onde ? | Un déplacement de matière | Une propagation de perturbation | true | 0
+[LOG] [2025-03-12 22:17:34] - : Quelle est la relation entre fréquence et longueur d’onde pour une onde donnée ? | Elles sont proportionnelles | Elles sont inversement proportionnelles | true | 0
+[LOG] [2025-03-12 22:17:35] - : Quelles sont les unités de la fréquence et de la longueur d’onde dans le Système International ? | Joule (J) et seconde (s) | Hertz (Hz) et mètre (m) | true | 0
+[LOG] [2025-03-12 22:17:36] - : Quelle propriété des ondes ne change pas lors d’un changement de milieu ? | La fréquence | La fréquence | false | 0
+[LOG] [2025-03-12 22:17:38] - : Parmi ces phénomènes, lequel n'est pas une interaction d’ondes ? | Diffraction | Condensation | true | 0
+[LOG] [2025-03-12 22:17:39] - : L’effet Doppler est une variation de : | La vitesse de propagation de l’onde | La fréquence perçue d’une onde | true | 0
+[LOG] [2025-03-12 22:17:40] - : Lorsque la source sonore s’approche d’un observateur, la fréquence perçue : | Reste constante | Augmente | true | 0
+[LOG] [2025-03-12 22:17:41] - : Le décalage vers le rouge en astronomie est dû à : | Un objet qui se rapproche | Un objet qui s’éloigne | true | 0
+[LOG] [2025-03-12 22:17:42] - : Quel domaine médical utilise l’effet Doppler pour l’imagerie ? | Scanner cérébral | Echographie | true | 0
+[LOG] [2025-03-12 22:17:44] - : Quel scientifique a formulé l’effet Doppler pour la première fois ? | Albert Einstein | Christian Doppler | true | 0
+[LOG] [2025-03-12 22:17:45] - : Dans l’expérience, quelle grandeur est mesurée pour observer l’effet Doppler ? | La résistance électrique | La fréquence du son | true | 0
+[LOG] [2025-03-12 22:17:46] - : Quel matériel est nécessaire pour enregistrer la variation de fréquence d’une source sonore mobile ? | Un thermomètre | Un capteur de fréquence ou un microphone | true | 0
+[LOG] [2025-03-12 22:17:48] - : Pourquoi est-il important d’avoir une source sonore en mouvement pour observer l’effet Doppler ? | Car l’air modifie les fréquences sonores | Car seule une source en mouvement modifie la fréquence perçue | true | 0
+[LOG] [2025-03-12 22:17:49] - : En analysant les données, comment peut-on déterminer si la source s’éloigne ou se rapproche ? | En mesurant une augmentation d’amplitude | En comparant la fréquence mesurée avec la fréquence initiale | true | 0
+[LOG] [2025-03-12 22:17:50] - : Quel type d’analyse logicielle peut être utilisée pour exploiter les résultats expérimentaux ? | Analyse de Ramses II | Analyse spectrale des fréquences | true | 0

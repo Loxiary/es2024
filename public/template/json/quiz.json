@@ -1,0 +1,137 @@
+[
+    {
+        "id": 0, 
+        "question": "Qu’est-ce qu’une onde ?",
+        "answer": "Une propagation de perturbation",
+        "fakeAnswer1": "Un déplacement de matière",
+        "fakeAnswer2": "Un courant électrique",
+        "fakeAnswer3": "Un mouvement aléatoire",
+        "difficulty": "Facile"
+    },
+    {
+        "id": 1, 
+        "question": "Quelle est la relation entre fréquence et longueur d’onde pour une onde donnée ?",
+        "answer": "Elles sont inversement proportionnelles",
+        "fakeAnswer1": "Elles sont indépendantes",
+        "fakeAnswer2": "Elles sont proportionnelles",
+        "fakeAnswer3": "La longueur d’onde est toujours plus grande que la fréquence",
+        "difficulty": "Moyenne"
+    },
+    {
+        "id": 2, 
+        "question": "Quelles sont les unités de la fréquence et de la longueur d’onde dans le Système International ?",
+        "answer": "Hertz (Hz) et mètre (m)",
+        "fakeAnswer1": "Joule (J) et seconde (s)",
+        "fakeAnswer2": "Pascal (Pa) et Newton (N)",
+        "fakeAnswer3": "Kelvin (K) et ampère (A)",
+        "difficulty": "Moyenne"
+    },
+    {
+        "id": 3, 
+        "question": "Quelle propriété des ondes ne change pas lors d’un changement de milieu ?",
+        "answer": "La fréquence",
+        "fakeAnswer1": "L’amplitude",
+        "fakeAnswer2": "La longueur d’onde",
+        "fakeAnswer3": "La vitesse de propagation",
+        "difficulty": "Difficile"
+    },
+    {
+        "id": 4, 
+        "question": "Parmi ces phénomènes, lequel n'est pas une interaction d’ondes ?",
+        "answer": "Condensation",
+        "fakeAnswer1": "Réflexion",
+        "fakeAnswer2": "Absorption",
+        "fakeAnswer3": "Diffraction",
+        "difficulty": "Difficile"
+    },
+    {
+        "id": 5, 
+        "question": "L’effet Doppler est une variation de :",
+        "answer": "La fréquence perçue d’une onde",
+        "fakeAnswer1": "La vitesse de propagation de l’onde",
+        "fakeAnswer2": "La masse de l’émetteur",
+        "fakeAnswer3": "L’amplitude de l’onde",
+        "difficulty": "Facile"
+    },
+    {
+        "id": 6, 
+        "question": "Lorsque la source sonore s’approche d’un observateur, la fréquence perçue :",
+        "answer": "Augmente",
+        "fakeAnswer1": "Diminue",
+        "fakeAnswer2": "Reste constante",
+        "fakeAnswer3": "Devient infinie",
+        "difficulty": "Moyenne"
+    },
+    {
+        "id": 7, 
+        "question": "Le décalage vers le rouge en astronomie est dû à :",
+        "answer": "Un objet qui s’éloigne",
+        "fakeAnswer1": "Un objet qui se rapproche",
+        "fakeAnswer2": "Une variation d’intensité lumineuse",
+        "fakeAnswer3": "Une réflexion sur un corps céleste",
+        "difficulty": "Moyenne"
+    },
+    {
+        "id": 8, 
+        "question": "Quel domaine médical utilise l’effet Doppler pour l’imagerie ?",
+        "answer": "Echographie",
+        "fakeAnswer1": "Radiographie",
+        "fakeAnswer2": "IRM",
+        "fakeAnswer3": "Scanner cérébral",
+        "difficulty": "Difficile"
+    },
+    {
+        "id": 9, 
+        "question": "Quel scientifique a formulé l’effet Doppler pour la première fois ?",
+        "answer": "Christian Doppler",
+        "fakeAnswer1": "Albert Einstein",
+        "fakeAnswer2": "Isaac Newton",
+        "fakeAnswer3": "Heinrich Hertz",
+        "difficulty": "Difficile"
+    },
+    {
+        "id": 10, 
+        "question": "Dans l’expérience, quelle grandeur est mesurée pour observer l’effet Doppler ?",
+        "answer": "La fréquence du son",
+        "fakeAnswer1": "La température de l’air",
+        "fakeAnswer2": "La résistance électrique",
+        "fakeAnswer3": "L’humidité de l’air",
+        "difficulty": "Facile"
+    },
+    {
+        "id": 11, 
+        "question": "Quel matériel est nécessaire pour enregistrer la variation de fréquence d’une source sonore mobile ?",
+        "answer": "Un capteur de fréquence ou un microphone",
+        "fakeAnswer1": "Un oscilloscope",
+        "fakeAnswer2": "Un baromètre",
+        "fakeAnswer3": "Un thermomètre",
+        "difficulty": "Moyenne"
+    },
+    {
+        "id": 12, 
+        "question": "Pourquoi est-il important d’avoir une source sonore en mouvement pour observer l’effet Doppler ?",
+        "answer": "Car seule une source en mouvement modifie la fréquence perçue",
+        "fakeAnswer1": "Car une source immobile n’émet pas de son",
+        "fakeAnswer2": "Car l’air modifie les fréquences sonores",
+        "fakeAnswer3": "Car la lumière affecte le son",
+        "difficulty": "Moyenne"
+    },
+    {
+        "id": 13, 
+        "question": "En analysant les données, comment peut-on déterminer si la source s’éloigne ou se rapproche ?",
+        "answer": "En comparant la fréquence mesurée avec la fréquence initiale",
+        "fakeAnswer1": "En mesurant une augmentation d’amplitude",
+        "fakeAnswer2": "En observant une variation de vitesse",
+        "fakeAnswer3": "En mesurant la température du milieu",
+        "difficulty": "Difficile"
+    },
+    {
+        "id": 14, 
+        "question": "Quel type d’analyse logicielle peut être utilisée pour exploiter les résultats expérimentaux ?",
+        "answer": "Analyse spectrale des fréquences",
+        "fakeAnswer1": "Analyse de la vitesse du vent",
+        "fakeAnswer2": "Analyse de la pression atmosphérique",
+        "fakeAnswer3": "Analyse de Ramses II",
+        "difficulty": "Difficile"
+    }
+]

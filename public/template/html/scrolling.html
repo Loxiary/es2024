@@ -6,9 +6,10 @@
     <link rel="icon" type="image/png" href="../../images/png/logo-title.png" />
     <link rel="stylesheet" href="../../template/css/scrolling.css">
     <script src="../../template/js/windowManager.js" defer></script>
+    <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
     <title>Effet Doppler</title>
 </head>
-<body>
+<body onload="LoadData()">
 
     <button id="navbar-btn" onclick="ToggleNavbar()">≡</button>
     
@@ -76,11 +77,389 @@
     </section>
 
     <section class="section_first_part">
-        <div>treset</div>
-    </section>
+        <div class="border"></div>
+        <div class="separation_line"></div>
+        <h2>I - Le fonctionnement d'une onde</h2>
+        <div class="content_01">
+            <div>
+                <h3><u>1. Définition et caractéristiques d'une onde</u></h3>
+                <br><br>
+                <span>
+                    Une onde est une perturbation qui se propage dans un milieu ou dans le vide, transportant de l'énergie sans transport de matière de façon macroscopique. <br><br>
+    
+                    Caractéristiques principales :<br>
+                    <span>&emsp;&emsp;&emsp;×&emsp;<b>Amplitude ( A )</b> : grandeur maximale de la perturbation.<br></span>
+                    <span>&emsp;&emsp;&emsp;×&emsp;<b>Période ( T )</b> : durée nécessaire pour qu'un point du milieu retrouve son état initial après une oscillation complète.<br></span>
+                    <span>&emsp;&emsp;&emsp;×&emsp;<b>Fréquence ( f )  de formule `1/T`</b> : nombre d'oscillations par seconde (exprimée en hertz, Hz).<br></span>
+                    <span>&emsp;&emsp;&emsp;×&emsp;<b>Longueur d'onde ( λ )</b> : distance parcourue par l'onde pendant une période.<br></span>
+                    <span>&emsp;&emsp;&emsp;×&emsp;<b>Vitesse de propagation ( v )</b> : vitesse à laquelle la perturbation se déplace.<br></span>
+                </span>
+            </div>
+            <div class="separation_line"></div>
+            <div class="img_div">
+                <img src="../../images/png/caracteristique onde.png" alt="onde image">
+                <p style="text-decoration: underline; margin-top: 1em;">Image d'une onde expliquée</p>
+            </div>
+        </div>
+        <span class="mid_text" style="text-align: center;">Il existe <b>plusieurs types</b> d'ondes : Les ondes <b>mécaniques</b> et les ondes <b>électromagnétiques</b></span>
+        <div class="content_02">
+            <div class="text">
+                <h3><u>2. Différence entre onde mécanique et onde électromagnétique</u></h3><br>
+                <span>Ondes mécaniques : nécessitent un milieu matériel pour se propager (exemple : son, vagues).<br>
 
+                    Ondes électromagnétiques : peuvent se propager dans le vide (exemple : lumière, ondes radio).<br><br>
+                    
+                    <u><b>Les ondes mécaniques peuvent être :</b></u><br>
+                    
+                    Transversales : la perturbation est perpendiculaire à la direction de propagation (exemple : vagues).<br>
+                    
+                    Longitudinales : la perturbation est parallèle à la direction de propagation (exemple : son).</span>
+            </div>
+            <div class="separation_line"></div>
+            <div class="img_div">
+                <img src="../../images/png/onde design.png" alt="onde design">
+                <p style="text-decoration: underline; margin-top: 1em;">Design de la propagation d'une onde par Ouest France</p>
+            </div>
+        </div>
+        <span class="mid_text" style="text-align: center;">Chaque onde suivent des <b>paramètres fondamentaux</b> que toutes les ondes suivents</b></span>
+        <div class="content_03">
+            <div class="text">
+                <h3><u>3. Paramètres fondamentaux d'une onde</u></h3><br>
+                <span>La vitesse de propagation est donnée par la relation fondamentale avec :<br><br>
+                    
+                    &emsp;&emsp;&emsp;` v ` : vitesse de l'onde (m/s),<br>
+                    
+                    &emsp;&emsp;&emsp;` gamma ` : longueur d'onde (m),<br>
+                    
+                    &emsp;&emsp;&emsp;` f ` : fréquence (Hz).<br><br>
+                    
+                    Dans un milieu donné, la vitesse dépend du type d'onde et des propriétés du milieu. Par exemple, pour une onde sonore dans l'air :</span> <p style="text-align: center; font-size: 1em;"><br><br>` v = sqrt((gamma*P)/(rho))`<br><br></p>
+                    
+                    <span>où `gamma` est le coefficient adiabatique ( c'est le rapport des capacités thermiques d'un gaz à pression constante ), `P` la pression et `rho` la masse volumique.</span>
+            </div>
+        </div>
+        <span class="mid_text" style="text-align: center;">Les ondes qu'elles soient <b>sonores ou lumineuses</b> interagissent avec leur <b>environnement</b></span>
+        <div class="content_04">
+            <div class="text">
+                <h3><u>4. Effets physiques des ondes</u></h3><br>
+                <span><b>4.1. Réflexion</b><br>
+
+                    &emsp;&emsp;Lorsqu'une onde rencontre une interface séparant deux milieux, elle peut être réfléchie. La loi de la réflexion s'écrit : `theta_i = theta_r`
+                    
+                    où `theta_i` est l'angle d'incidence et `theta_r` l'angle de réflexion.<br><br>
+                    
+                    <b>4.2. Diffraction</b><br>
+                    
+                    &emsp;&emsp;Lorsqu'une onde rencontre un obstacle ou une ouverture, elle se propage en déviant de sa trajectoire initiale. L'angle de diffraction `theta` est approximé par : `theta \approx gamma/a`
+                    
+                    où `a` est la largeur de l'ouverture.<br><br>
+                    
+                    <b>4.3. Interférence</b><br>
+                    
+                    &emsp;&emsp;Lorsque deux ondes cohérentes se superposent, elles créent des interférences constructives ou destructives. L’intensité résultante est donnée par : `I = I_1 + I_2 + 2sqrt(I_1I_2)cos(Deltaphi)`
+                    
+                    où `Deltaphi` est le déphasage entre les deux ondes.
+                    
+                    Ces phénomènes sont essentiels pour la compréhension de nombreux domaines comme l'optique, l'acoustique et les télécommunications.</span>
+            </div>
+            <div class="separation_line"></div>
+            <div class="img_div">
+                <img src="../../images/jpg/Ondes-sonores-DJ.jpg" alt="onde DJ">
+                <p style="text-decoration: underline; margin-top: 1em; text-align: center;">Design de la propagation d'une onde sur un disque vinyle</p>
+            </div>
+        </div>
+    </section>
+    <p class="mid_part_text">Ainsi, après avoir exploré les <b>caractéristiques générales</b> des ondes et leurs <b>effets physiques</b>, nous allons maintenant nous intéresser à deux formes d’ondes particulièrement fascinantes : <b>les ondes sonores</b> et <b>lumineuses</b>, et à une manifestation remarquable de leur comportement, <b><u>l’Effet Doppler.</u></b></p>
+    <section class="section_second_part">
+        <div class="border"></div>
+        <h2>II - Un spectacle son et lumière</h2>
+        <div class="content_01">
+            <div>
+                <h3><b><u>1. Nature et propagation du son</u></b></h3>
+                <br><br>
+                <span>
+                    Le son est une <b>onde mécanique</b> qui se propage uniquement dans un milieu matériel (gaz, liquide ou solide). Il résulte des <b>vibrations des particules</b> du milieu, créant des zones de <b>compression</b> et de <b>raréfaction</b>. La vitesse du son dépend du milieu :
+
+                    <br><br><b>Dans l'air</b> : environ 340 m/s,
+
+                    <br><b>Dans l'eau</b> : environ 1500 m/s,
+
+                    <br><b>Dans les solides</b> : souvent bien plus élevée.
+                </span>
+            </div>
+        </div>
+        <span class="mid_text" style="text-align: center;">Les ondes qu'elles soient <b>sonores ou lumineuses</b> interagissent avec leur <b>environnement</b></span>
+        <div class="content_02">
+            <div>
+                <h3><u>2. Nature et propagation de la lumière</u></h3>
+                <br><br>
+                <span>
+                    La lumière est une <b>onde électromagnétique</b> qui peut se propager dans le vide. Elle est constituée de <b>champs électriques</b> et <b>magnétiques oscillants</b> perpendiculaires à la direction de propagation ( cf. schéma sur la droite ). Sa vitesse est d'environ `c = `<b>299 792 458 m/s</b> dans le vide et diminue lorsqu'elle traverse un milieu matériel, selon l'indice de réfraction `n` : `v = c/n`.<br><br>
+                    <b><u>Le spectre lumineux ( cf. schéma sur la droite )</u></b><br><br>
+
+                    &emsp;&emsp;Le spectre électromagnétique regroupe l’ensemble des <b>ondes électromagnétiques</b> classées selon leur <b>longueur d’onde</b>. <br><br>&emsp;&emsp;La lumière visible représente une petite portion de ce spectre, comprise entre <b>400 nm</b> (violet) et <b>700 nm</b> (rouge).
+
+                    <br><br><u>Les principales parties du spectre sont :</u><br>
+
+                    &emsp;&emsp; - Ondes radio (longueur d’onde > 1 mm)<br>
+
+                    &emsp;&emsp; - Micro-ondes<br>
+
+                    &emsp;&emsp; - Infrarouge<br>
+
+                    &emsp;&emsp; - Lumière visible (violet, bleu, vert, jaune, orange, rouge)<br>
+
+                    &emsp;&emsp; - Ultraviolet<br>
+
+                    &emsp;&emsp; - Rayons X<br>
+
+                    &emsp;&emsp; - Rayons gamma (longueur d’onde < 0,01 nm)<br><br>
+
+                    <u>Chaque type d’onde a des applications spécifiques, par exemple :</u><br>
+
+                    &emsp;&emsp; - Les <b>infrarouges</b> sont utilisés en thermographie et en télécommandes.<br>
+
+                    &emsp;&emsp; - Les <b>ultraviolets</b> sont responsables du bronzage et utilisés pour la stérilisation.<br>
+
+                    &emsp;&emsp; - Les <b>rayons X</b> servent en imagerie médicale.<br>
+
+                    &emsp;&emsp; - Les <b>rayons gamma</b> sont utilisés en radiothérapie et en astrophysique.<br>
+                </span>
+            </div>
+            <div class="separation_line"></div>
+            <div class="img_div">
+                <img src="../../images/png/champ magnetique electrique.png" alt="chamsp électriques et magnétiques">
+                <p style="text-decoration: underline; margin-top: 1em; text-align: center;">Schéma des champs électriques et magnétiques oscillants</p><br>
+                <img src="../../images/png/Le spectre électromagnétique.png" alt="onde DJ">
+                <p style="text-decoration: underline; margin-top: 1em; text-align: center;">Schéma du spectre lumineux</p>
+            </div>  
+        </div>
+        <div class="content_03">
+            <div>
+                <h3><b><u>3. Kesako ? l'Effet Doppler ?
+                </u></b></h3>
+                <br><br>
+                <span>
+                    L'<b>Effet Doppler</b> est le <b>changement de fréquence</b> d’une <b>onde</b> perçue par un <b>récepteur</b> lorsque <b>l’émetteur</b> et le récepteur sont en <b>mouvement relatif</b>.<br>
+                    Il peut être utilisé pour calculer des <b>vitesses</b> et des <b>fréquences</b>.<br>
+                    C'est un <b>phénomène ondulatoire</b> qui s’applique à tout type d’ondes, mécaniques comme électromagnétiques (son, lumière, etc.)
+
+                    Il se traduit par une modification de la fréquence perçue :<br><br><p style="display: block; text-align: center;">`f' = f((v+v_O)/(v - v_s))`</p><br> où `v` est la vitesse du son, `v_O` la vitesse de l'observateur et `v_s` celle de la source.<br>
+
+                    Dans le cas où l'émetteur se <b>rapproche frontalement</b> du récépteur : `f_R = f_E((1+v)/v_(onde) - v)`, ce qui revient à <br><br><p style="display: block; text-align: center;">`Deltaf = f_R - f_E = f_E((1+v)/v_(onde) - v)`</p><br><br>
+
+                    On sait que la <b>fréquence</b> est influencée par la <b>vitesse de l'observateur et de l'émetteur</b>. On cherche maintenant à démontrer que la <b>distance émetteur/récepteur</b> influence également cette fréquence.<br><br>
+                    <b><u>Démonstration :</u></b><br>
+                    &emsp;&emsp;Imaginons une voiture qui se dirige vers un récepteur. Elle émet régulièrement des coups de klaxon avec une fréquence `f_E` ( donc période `T_E = 1/f_E`).<br>
+                    <b>La première onde émise</b> arrive avec un certain retard `t1 = d/v_(onde)`<br>
+                    <b>L'onde suivante</b> arrive avec un <b>retard différent, qui a deux causes</b>. D'une part, l'onde est <b>émise plus tard, après un temps</b> `T_E`. D'autre part, la <b>distance à parcourir à changé puisque l'émetteur est plus proche</b> du récepteur ( délai de `(d-T_(e.v))/v_(onde)`)<br><br>
+                    Donc `t_2 = T_E + (d-T_(e.v))/v_(onde)`<br><br>
+                    On a alors `T_R = t_2 - t_1`<br>`= T_E - T_(e.v)/v_(onde) `<br>`= T_E(1-v/v_(onde))`<br><br>
+                    En inversant, `f_R = f_E(v_(onde)/(v_(onde) - v)) `<br>`= f_E(1+v/(v_(onde)-v))`<br><br>On retrouve la formule initiale<br><br>
+
+                    En retrouvant la <b>formule initaile</b>, on peut confirmer que la <b><u>fréquence perçue par l'émetteur est influencée par la distance émetteur/récepteur.</u></b>
+
+                </span>
+            </div>
+        </div>
+        <div class="content_04">
+            <div>
+                <h3><b><u>4. Manifestations de l'effet Doppler dans le son</u></b></h3>
+                <br><br>
+                <span>
+                    <b><u>Les radars routiers :</u></b><br>
+                    &emsp;&emsp;Les <b>radars routiers</b> utilisent l’effet Doppler pour mesurer avec précision la vitesse des véhicules.<br> &emsp;&emsp;Un <b>faisceau d’ondes radio</b> est émis vers le véhicule ; en fonction du changement de fréquence entre <b>l’onde émise</b> et <b>l’onde réfléchie</b>, la vitesse est calculée avec précision.<br><br>
+                    <br><b><u>Les Doppler Sanguins :</u></b><br>
+                    &emsp;&emsp;Grâce à l'Effet Doppler, la médecine utilise une technique <b>d'imagerie médiacale</b> pour mesurer la <b>vitesse et la drection du flux sanguin</b> dans les vaisseaux sanguins.<br>
+                    &emsp;&emsp;&emsp; - <b>Doppler continu :</b> utilisé pour mesurer des flux sanguins rapides, notamment dans les grandes artères.<br>
+                    &emsp;&emsp;&emsp; - <b>Doppler pulsé :</b> permet d’analyser précisément la vitesse du sang en un point donné.<br>
+                    &emsp;&emsp;&emsp; - <b>Doppler couleur :</b> superpose une couleur sur l’image pour représenter la direction et la vitesse du sang.<br>
+                    &emsp;&emsp;&emsp; - Le <b>rouge</b> indique un flux sanguin <b>se rapprochant</b> de la sonde.<br>
+                    &emsp;&emsp;&emsp; - Le <b>bleu</b> indique un flux sanguin <b>s’éloignant</b> de la sonde.<br><br>
+                    <b><u>Utilisation en clinique :</u></b><br>
+
+                    &emsp;&emsp;&emsp; - Détection de <b>thromboses</b> (caillots sanguins).<br>
+                    &emsp;&emsp;&emsp; - Analyse des artères pour diagnostiquer des <b>sténoses</b> (rétrécissements).<br>
+                    &emsp;&emsp;&emsp; - <b>Surveillance des flux sanguins</b> chez les femmes enceintes pour évaluer le bon fonctionnement du <b>placenta</b> et du <b>cœur du fœtus</b>.<br><br><br>
+                    
+                    <b><u>Militaire : Sonar sous-marin :</u></b><br>
+                    &emsp;&emsp;&emsp;Les <b>sous-marins</b> et les <b>navires</b> utilisent le sonar Doppler pour <b>mesurer leur vitesse par rapport au fond marin</b>. Des ondes sonores sont envoyées vers le sol et l'effet Doppler permet d'estimer la <b>vitesse du navire en fonction du changement de fréquence des ondes réfléchies</b>.
+                </span>
+            </div>
+            <div class="separation_line"></div>
+            <div class="img_div">
+                <img src="../../images/png/echo-doppler.jpg" alt="echographie doppler">
+                <p style="text-decoration: underline; margin-top: 1em; text-align: center;">Image d'une échographie Doppler</p><br>
+                <img src="../../images/png/radar.jpg" alt="onde DJ">
+                <p style="text-decoration: underline; margin-top: 1em; text-align: center;">Image d'un radar utilisant l'Effet Doppler</p>
+            </div>  
+        </div>
+
+        <div class="content_05">
+            <div>
+                <h3><b><u>5. Manifestations de l'effet Doppler dans la lumière</u></b></h3>
+                <br><br>
+                <span>
+                    <b><u>Décalage vers le rouge (redshift) et le bleu (blueshift) :</u></b><br>
+                    &emsp;&emsp;Lorsque la source lumineuse <b>s'éloigne</b> de l'observateur, la <b>longueur d'onde de la lumière augmente</b> (elle est "étirée"), ce qui la décale vers le <b>rouge</b> dans le spectre visible.<br>
+                    En revanche, si la source se <b>rapproche</b>, la <b>longueur d'onde diminue</b> (elle est "compressée"), décalant la lumière vers le <b>bleu</b>.<br>
+                    <br><br>
+                    <b><u>L'Effet Doppler-Fizeau :</u></b><br>
+                    En astronomie, il est utilisé pour analyser le mouvement des <b>étoiles, expolanètes et galaxies</b> :<br>
+                    &emsp;&emsp;&emsp; - <b>Vitesse des étoiles</b> : en analysant leur spectre lumineux, on peut déterminer si elles s’éloignent ou se rapprochent de nous.<br>
+                    &emsp;&emsp;&emsp; - <b>Détection d’exoplanètes</b> : lorsqu’une planète tourne autour d’une étoile, l’étoile oscille légèrement sous l’effet de <b>l’attraction gravitationnelle</b>. Cette oscillation entraîne des <b>variations périodiques du redshift et du blueshift</b> de la lumière émise par l’étoile. Ce phénomène est utilisé pour détecter des exoplanètes avec la méthode des vitesses radiales.<br>
+                    <br><br>
+                    <b><u>L'effet d’Hubble et l'expansion de l'univers :</u></b><br>
+                    &emsp;&emsp;En 1929, Edwin Hubble a découvert que plus une galaxie est éloignée de nous, plus son spectre lumineux est décalé vers le rouge. Cela signifie que les galaxies s’éloignent les unes des autres et que l’univers est en expansion. 
+                    Cette observation est à la base du modèle du <b>Big Bang</b> et a permis de comprendre que s'il est en expansion, alors il était bien <b>plus dense et chaud par le passé</b> et que plus une galaxie est rouge, plus celle-ci est agée. 
+                    Cela permet d'estimer <b>l'âge et la vitesse d'expansion</b> de l'umnivers.
+                </span>
+            </div>
+            <div class="separation_line"></div>
+            <div class="img_div">
+                <img src="../../images/png/eloignement doppler.jpg" alt="eloignement doppler">
+                <p style="text-decoration: underline; margin-top: 1em; text-align: center;">Schéma de l'éloigement et du rapporchement permettant le blueshift / redshift</p><br>
+                <img src="../../images/png/red-galaxies.jpg" alt="red galaxies hubble">
+                <p style="text-decoration: underline; margin-top: 1em; text-align: center;">Image du redshift de galaxies capté par le téléscope Hubble</p>
+            </div>  
+        </div>
+    </section>
+    <p class="mid_part_text">Nous avons expliqué le concept complexe qu'est <b>l'Effet Doppler</b> et nous avons mis en évidence son <b>omniprésence dans la vie</b> et son <b>utilisation</b> dans de multiples domaines. L'effet Doppler affecte les deux types d'ondes, qu'elles soient <b>mécaniques</b> pour le son ou <b>électromagnétiques</b> pour la lumière. Nous allons donc à présent mettre en place une <b>expérience sur l'Effet Doppler sonore</b>.</u></b></p>
+    <section class="section_third_part">
+        <div class="border"></div>
+        <h2>III - L'Expérience</h2>
+        <div class="content_01">
+            <div>
+                <h3><b><u>1. Présentation du protocole expérimental</u></b></h3><br><br>
+                <span>
+                    <b>Objectif</b> : Démontrer l'effet Doppler sonore en enregistrant la variation de fréquence d'un son émis par un téléphone en mouvement face à un autre téléphone fixe qui enregistre le son.<br><br>
+                    <u><i>Aucune précaution expérimentale.</i></u>
+                </span>
+            </div>
+        </div>
+        <div class="content_02">
+            <div>
+                <h3><b><u>2. Matériel utilisé</u></b></h3><br><br>
+                <span>
+                    <u><i>- Deux téléphones portables</i></u><br>
+                    &emsp;&emsp; - Téléphone émetteur : émettant un son à fréquence fixe<br>
+                    &emsp;&emsp; - Téléphone récepteur : enregistrant le son<br><br>
+
+                    <u><i>- Logiciels</i></u><br>
+                    &emsp;&emsp; - Audacity : Affichage et traitement de spectrogramme<br>
+                    &emsp;&emsp; - Magnétophone : Enregistrement de l'audio<br>
+                    &emsp;&emsp; - Frequency Generator : Émet une fréquence pure (partiellement pure car les haut-parleurs ne sont pas précis)<br><br>
+
+                    <u><i>- Distance</i></u><br>
+                    &emsp;&emsp; - Mètre ruban : Permet de mesurer la distance<br>
+                </span>
+            </div>
+        </div>
+        <div class="content_03">
+            <div>
+                <h3><b><u>3. Déroulement de l'expérience</u></b></h3><br><br>
+                <span>
+                    <u><i>Installation</i></u><br>
+                    &emsp;&emsp; - Placez le téléphone émetteur sur un dispositif mobile ou gardez le en main.<br>
+                    &emsp;&emsp; - Positionnez le téléphone récepteur sur un support fixe.<br>
+                    &emsp;&emsp; - Réglez le téléphone émetteur sur une fréquence fixe avec Frequency Generator(ici la fréquence utilisée est la fréquence 2000Hz).<br><br>
+
+                    <u><i>Enregistrement</i></u><br>
+                    &emsp;&emsp; - Démarrez l'enregistrement du son sur le téléphone récepteur avec le Magnétophone.<br>
+                    &emsp;&emsp; - Lancez le déplacement du téléphone émetteur à vitesse constante en direction du récepteur (plus simple sur un dispositif mobile plutôt que dans une main).<br>
+                    &emsp;&emsp; - Arrêtez l'enregistrement.<br><br>
+
+                    <u><i>Analyse des données</i></u><br>
+                    &emsp;&emsp; - Importez le fichier audio enregistré dans Audacity.<br>
+                    &emsp;&emsp; - Observez la fréquence du son lorsque l'émetteur se déplace.<br>
+                    &emsp;&emsp; - Comparez ces valeurs avec la fréquence initiale pour mesurer le décalage Doppler<br>
+                </span>
+            </div>
+        </div>
+        <div class="content_04">
+            <div>
+                <h3><b><u>4. Recueil des données</u></b></h3><br><br>
+                <span>
+                    <u><i>Données sonores</i></u><br>
+                    &emsp;&emsp; - Fréquence émise `f` = 2000Hz<br>
+                    &emsp;&emsp; - Pic de fréquence reçu `f'` = 2037Hz<br><br>
+                    
+                    <u><i>Données de vitesse</i></u><br>
+                    &emsp;&emsp; - Vitesse du son `v_(son)` = 340m/s<br>
+                    &emsp;&emsp; - Vitesse du récepteur (fixe) `v_r` = 0 m/s<br>
+                    &emsp;&emsp; - Vitesse de l'émetteur `v_e` (à déterminer) = ?<br><br>
+
+                    <u><i>Formule utilisée</i></u><br>
+                    &emsp;&emsp; - Formule de l'Effet Doppler : `f' = f((v_(son) + v_r)/(v_(son) - v_e))`<br><br>
+
+                </span>
+            </div>
+            <div class="separation_line"></div>
+            <div class="img_div">
+                <img src="../../images/png/doppler experience.png" alt="eloignement doppler">
+                <p style="text-decoration: underline; margin-top: 1em; text-align: center;">Spectrogramme de l'expérience réalisée</p><br>
+            </div>  
+        </div>
+        <div class="content_05">
+            <div>
+                <h3><b><u>5. Interprétation des résultats</u></b></h3><br><br>
+                <span>
+                    <u><b><i>Augmentation de la fréquence enregistrée :</i></b></u><br>
+                    L'augmentation de la fréquence de 2000Hz à 2037Hz signifie que l'émmeteur se rapproche. Si la fréquence avait diminuée, cela aurait signifié que l'émetteur s'éloignait du récepteur.<br><br>
+                    <u><b><i>Recherche de la valeur `v_e` :</i></b></u><br>
+                    Avec les valeurs trouvées lors de l'expérience, nous sommes en mesure de déterminer la vitesse de l'émetteur.<br><br>
+                    <p>`iff f' = f((v_(son)+v_r)/(v_(son) - v_e))`</p><br>
+                    <p>`iff 2037 = 2000((340)/(340 - v_e))`</p><br>
+                    <p>`iff 2037/2000 = (340)/(340 - v_e)`</p><br>
+                    <p>`iff 1.0185 = (340)/(340 - v_e)`</p><br>
+                    <p>`iff 340-v_e=340/1.0185`</p><br>
+                    <p>`iff 340-v_e approx 333.6`</p><br>
+                    <p>`iff v_e approx 6.4m*s^(-1) approx 23km*h^(-1)`</p><br><br>
+                    On peut en déduire que la vitesse de l'émetteur était de `23km*h^(-1)`<br>
+                    Par cette expérience, nous avons mis en évidence l'effet Doppler en montrant la variation de fréquence entre l'émetteur et le récepteur et en retrouvant la vitesse de l'émetteur
+                </span>
+            </div>
+        </div>
+    </section>
+    <p class="mid_part_text">Le <b>développement du sujet</b> touche à sa fin et nous pouvons procéder à la <b>conclusion</b>.</p>
+    <section class="section_conclusion">
+        <div class="border"></div>
+        <h2>IV - Conclusion</h2>
+        <div class="content_01">
+            En conclusion, l’effet Doppler est un <b>phénomène influençant les ondes fondamentales</b>, dans lequel leur différence de fréquence est perçue lorsque <b>l’émetteur et l’observateur</b> se déplacent les uns par rapport aux autres. <br><br>
+            Comme on l’a découvert dans le développement, indépendamment du <b>type mécanique ou électromagnétique</b>, les ondes ont un certain nombre de caractéristiques qui affectent leur mouvement à travers le milieu.<br><br>
+            Remarquons enfin que l’effet Doppler est non seulement applicable au domaine <b>auditif</b>, avec les <b>Doppler Sanguins</b>, les <b>radars</b> ou les <b>sous-marins</b>,
+            mais aussi au domaine de la <b>lumière</b>, qui permet aux astronomes de suivre le <b>mouvement des galaxies</b> et de déduire <b>l’expansion de l’univers</b>. <br><br>
+
+            Ainsi, l’expérience réalisée vérifie ce phénomène en mettant en évidence la variation de la longueur d'onde et en retrouvant la vitesse de l'émetteur.<br><br>
+
+            L’effet Doppler prouve que les <b>phénomènes ondulatoires</b> sont multiples et importants dans de nombreux <b>champs scientifiques et technologiques</b> qui nous entourent au quotidien.
+        </div>
+    </section>
+    <section class="section_bonus">
+        <div class="border"></div>
+        <h2>V - Bonus</h2>
+        <div class="content_01">
+            <div><span>Vous êtes arrivé à la fin de ce projet d'enseignement scientifique porté sur l'Effet Doppler présenté par Tristan Leymonie, Gabin Gennesseaux et Mattis Fardo.<br><br>
+                Nous vous proposons désormais de faire un petit quiz pour vous évaluer sur les principales informations<br></span></div>
+            <div class="separation_line"></div>
+            <div>
+                <span>Cliquez sur le bouton ci-dessous pour réaliser le quiz <i>( 15 questions )</i> :<br>
+                <i><span style="font-size: 0.7em;">( Une question facile, deux moyennes et une difficile par grandes parties )</span></i></span><br><br>
+                <button class="quiz_button" onclick="ToggleQuiz()">Faire le Quiz !</button>
+            </div>
+        </div>
+        
+    </section>
+    <footer>
+        <img src="../../images/png/ecusson.png" alt="ecusson ptlv">
+        Projet réalisé par Tristan Leymonie, Gabin Gennesseaux et Mattis Fardo<br>Abbaye de Pontlevoy, Première, 2025
+    </footer>
+
+    <script type="text/javascript" src="../../template/json/quiz.json"></script>
     <script src="../../template/js/scrolling.js"></script>
 </body>
 </html>
 
 <!-- PENSER A METTRE EN CREDITS LE MEC POUR LES IMAGES DOISEAUX -->
+<!-- PENSER A METTRE LA DEFINITION DE COEFFICIENT ADIABETIQUE -->

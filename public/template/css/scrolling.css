@@ -535,6 +535,30 @@ nav li:hover{
     margin: 0 3em;
 }
 
+.section_second_part .content_04{
+    display: grid;
+    grid-template-columns: 60% auto auto;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.section_second_part .content_04 img{
+    width: 100%;
+}
+
+.section_second_part .content_04 .img_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.section_second_part .content_04 .separation_line{
+    height: 100%;
+    width: 1px;
+    background-color: #16285b;
+    margin: 0 3em;
+}
+
 @media(max-width: 1600px){
     .section_first_part{
         margin: 10em 15em;

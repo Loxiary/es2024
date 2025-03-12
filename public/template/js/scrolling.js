@@ -44,6 +44,13 @@ function updateParallax() {
         }, 0);
 }
 
+async function LoadData(){
+    fetch('http://localhost:3000/api/quiz')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Erreur lors de la récupération du quiz:', error));
+}
+
 function ToggleNavbar(){
     document.getElementById("mobile-nav-div").classList.toggle("show")
 }
@@ -61,6 +68,12 @@ function ToggleQuiz(){
         quizDiv.id = "quiz-div"
         quizDiv.className = "quiz_div"
         quizModalDiv.appendChild(quizDiv)
+
+        // QUIZ CLOSE BUTTON
+
+        let quizCloseButton = document.createElement("button")
+        quizCloseButton.id = "quiz-close-button"
+        quizCloseButton.textContent = "x"
 
         // QUIZ DISCLAIMER
 
@@ -82,6 +95,7 @@ function ToggleQuiz(){
         quizBottom.id = "quiz-bottom"
         quizBottom.className = "quiz_bottom"
 
+        quizDiv.appendChild(quizCloseButton)
         quizDiv.appendChild(quizDisclaimer)
         quizDiv.appendChild(quizHeader)
         quizDiv.appendChild(quizContent)
@@ -129,5 +143,7 @@ function ToggleQuiz(){
         quizBottom.appendChild(btn)
 
         document.body.appendChild(quizModalDiv)
+    }else{
+        document.body.removeChild(document.getElementById("nav-modal-div"))
     }
 }

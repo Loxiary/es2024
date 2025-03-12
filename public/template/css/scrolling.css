@@ -902,10 +902,14 @@ footer img{
     width: 100%;
     top: 0;
     backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .quiz_div{
     background-color: red;
+
 }
 
 @media(max-width: 1600px){

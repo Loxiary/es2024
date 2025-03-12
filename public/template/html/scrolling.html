@@ -6,6 +6,7 @@
     <link rel="icon" type="image/png" href="../../images/png/logo-title.png" />
     <link rel="stylesheet" href="../../template/css/scrolling.css">
     <script src="../../template/js/windowManager.js" defer></script>
+    <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
     <title>Effet Doppler</title>
 </head>
 <body>
@@ -76,7 +77,97 @@
     </section>
 
     <section class="section_first_part">
-        <div>treset</div>
+        <div class="border"></div>
+        <div class="separation_line"></div>
+        <h2>I - Le fonctionnement d'une onde</h2>
+        <div class="content_01">
+            <div>
+                <h3><u>1. Définition et caractéristiques d'une onde</u></h3>
+                <br><br>
+                <span>
+                    Une onde est une perturbation qui se propage dans un milieu ou dans le vide, transportant de l'énergie sans transport de matière de façon macroscopique. <br><br>
+    
+                    Caractéristiques principales :<br>
+                    <span>&emsp;&emsp;&emsp;×&emsp;<b>Amplitude ( A )</b> : grandeur maximale de la perturbation.<br></span>
+                    <span>&emsp;&emsp;&emsp;×&emsp;<b>Période ( T )</b> : durée nécessaire pour qu'un point du milieu retrouve son état initial après une oscillation complète.<br></span>
+                    <span>&emsp;&emsp;&emsp;×&emsp;<b>Fréquence ( f )</b> : nombre d'oscillations par seconde (exprimée en hertz, Hz).<br></span>
+                    <span>&emsp;&emsp;&emsp;×&emsp;<b>Longueur d'onde ( λ )</b> : distance parcourue par l'onde pendant une période.<br></span>
+                    <span>&emsp;&emsp;&emsp;×&emsp;<b>Vitesse de propagation ( v )</b> : vitesse à laquelle la perturbation se déplace.<br></span>
+                </span>
+            </div>
+            <div class="separation_line"></div>
+            <div class="img_div">
+                <img src="../../images/png/caracteristique onde.png" alt="onde image">
+                <p style="text-decoration: underline; margin-top: 1em;">Image d'une onde expliquée</p>
+            </div>
+        </div>
+        <span class="mid_text" style="text-align: center;">Il existe <b>plusieurs types</b> d'ondes : Les ondes <b>mécaniques</b> et les ondes <b>électromagnétiques</b></span>
+        <div class="content_02">
+            <div class="text">
+                <h3><u>2. Différence entre onde mécanique et onde électromagnétique</u></h3><br>
+                <span>Ondes mécaniques : nécessitent un milieu matériel pour se propager (exemple : son, vagues).<br>
+
+                    Ondes électromagnétiques : peuvent se propager dans le vide (exemple : lumière, ondes radio).<br><br>
+                    
+                    <u><b>Les ondes mécaniques peuvent être :</b></u><br>
+                    
+                    Transversales : la perturbation est perpendiculaire à la direction de propagation (exemple : vagues).<br>
+                    
+                    Longitudinales : la perturbation est parallèle à la direction de propagation (exemple : son).</span>
+            </div>
+            <div class="separation_line"></div>
+            <div class="img_div">
+                <img src="../../images/png/onde design.png" alt="onde design">
+                <p style="text-decoration: underline; margin-top: 1em;">Design de la propagation d'une onde par Ouest France</p>
+            </div>
+        </div>
+        <span class="mid_text" style="text-align: center;">Chaque onde suivent des <b>paramètres fondamentaux</b> que toutes les ondes suivents</b></span>
+        <div class="content_03">
+            <div class="text">
+                <h3><u>3. Paramètres fondamentaux d'une onde</u></h3><br>
+                <span>La vitesse de propagation est donnée par la relation fondamentale avec :<br><br>
+                    
+                    &emsp;&emsp;&emsp;` v ` : vitesse de l'onde (m/s),<br>
+                    
+                    &emsp;&emsp;&emsp;` gamma ` : longueur d'onde (m),<br>
+                    
+                    &emsp;&emsp;&emsp;` f ` : fréquence (Hz).<br><br>
+                    
+                    Dans un milieu donné, la vitesse dépend du type d'onde et des propriétés du milieu. Par exemple, pour une onde sonore dans l'air :</span> <p style="text-align: center; font-size: 1em;"><br><br>` v = sqrt((gamma*P)/(rho))`<br><br></p>
+                    
+                    <span>où `gamma` est le coefficient adiabatique ( c'est le rapport des capacités thermiques d'un gaz à pression constante ), `P` la pression et `rho` la masse volumique.</span>
+            </div>
+        </div>
+        <span class="mid_text" style="text-align: center;">Les ondes qu'elles soient <b>sonores ou lumineuses</b> interagissent avec leur <b>environnement</b></span>
+        <div class="content_04">
+            <div class="text">
+                <h3><u>4. Effets physiques des ondes</u></h3><br>
+                <span><b>4.1. Réflexion</b><br>
+
+                    &emsp;&emsp;Lorsqu'une onde rencontre une interface séparant deux milieux, elle peut être réfléchie. La loi de la réflexion s'écrit : `theta_i = theta_r`
+                    
+                    où `theta_i` est l'angle d'incidence et `theta_r` l'angle de réflexion.<br><br>
+                    
+                    <b>4.2. Diffraction</b><br>
+                    
+                    &emsp;&emsp;Lorsqu'une onde rencontre un obstacle ou une ouverture, elle se propage en déviant de sa trajectoire initiale. L'angle de diffraction  est approximé par :
+                    
+                    où  est la largeur de l'ouverture.<br><br>
+                    
+                    <b>4.3. Interférence</b><br>
+                    
+                    &emsp;&emsp;Lorsque deux ondes cohérentes se superposent, elles créent des interférences constructives ou destructives. L’intensité résultante est donnée par :
+                    
+                    où  est le déphasage entre les deux ondes.
+                    
+                    Ces phénomènes sont essentiels pour la compréhension de nombreux domaines comme l'optique, l'acoustique et les télécommunications.</span>
+            </div>
+            <div class="separation_line"></div>
+            <div class="img_div">
+                <img src="../../images/jpg/Ondes-sonores-DJ.jpg" alt="onde DJ">
+                <p style="text-decoration: underline; margin-top: 1em;">Design de la propagation d'une onde par Ouest France</p>
+            </div>
+        </div>
     </section>
 
     <script src="../../template/js/scrolling.js"></script>
@@ -84,3 +175,4 @@
 </html>
 
 <!-- PENSER A METTRE EN CREDITS LE MEC POUR LES IMAGES DOISEAUX -->
+<!-- PENSER A METTRE LA DEFINITION DE COEFFICIENT ADIABETIQUE -->

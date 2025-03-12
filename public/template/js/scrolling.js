@@ -6,6 +6,7 @@ const bat_2 = document.getElementById("bat_2");
 const bat_3= document.getElementById("bat_3");
 const bat_4 = document.getElementById("bat_4");
 const birds = document.getElementById("birds");
+const separator = document.getElementById("separator-3d")
 
 let multiplier = 0.5
 
@@ -40,7 +41,7 @@ function updateParallax() {
             birds.style.display = "block";
             bat_2.style.display = "block";
         }
-    }, 0);
+        }, 0);
 }
 
 function ToggleNavbar(){

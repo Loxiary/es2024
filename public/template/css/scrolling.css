@@ -97,7 +97,6 @@ nav li:hover{
 
 .section_introduction{
     padding: 10em 12.5em;
-    border-radius: 0 0 2.5em 2.5em;
     padding-top: 20em;
     z-index: 4;
     position: relative;
@@ -105,6 +104,7 @@ nav li:hover{
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     background-color: #16285b;
+    border-radius: 0 0 2.5em 2.5em;
 }
 
 .section_introduction #introduction-text{
@@ -168,7 +168,14 @@ nav li:hover{
 }
 
 .section_first_part{
-    height: 100%;
+    height: fit-content;
+    color: #16285b;
+    position: relative;
+    margin: 10em 20em;
+}
+
+.section_first_part .mid_text{
+    display: block;
 }
 
 #navbar-btn{
@@ -258,12 +265,191 @@ nav li:hover{
     color: #16285b;
 }
 
+.content_01{
+    padding: 0 5em;
+}
+
+.section_first_part .content_01{
+    display: grid;
+    grid-template-columns: 60% auto auto;
+    margin-bottom: 5em;
+}
+
+.section_first_part h2{
+    margin-bottom: 3em;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.section_first_part .content_01 img{
+    width: 100%;
+}
+
+.section_first_part .content_01 .img_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.section_first_part .content_01 .separation_line{
+    height: 100%;
+    width: 1px;
+    background-color: #16285b;
+    margin: 0 3em;
+}
+
+.section_first_part .content_01 span span{
+    padding-top: 5em;
+}
+
+.content_02{
+    padding: 0 5em;
+}
+
+.section_first_part .content_02{
+    display: grid;
+    grid-template-columns: 60% auto auto;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.section_first_part h2{
+    position: relative;
+    margin: 0 2em;
+    margin-bottom: 3em;
+    text-align: center;
+    text-decoration: underline;
+    background-color: #ffffff;
+    border: #16285b 1px solid;
+    z-index: 2;
+}
+
+.section_first_part .content_02 img{
+    width: 100%;
+}
+
+.section_first_part p{
+    font-size: 0.75em;
+}
+
+.section_first_part .content_02 .img_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.section_first_part .content_02 .separation_line{
+    height: 100%;
+    width: 1px;
+    background-color: #16285b;
+    margin: 0 3em;
+}
+
+.section_first_part .content_02 .text{
+
+}
+
+.section_first_part .content_02 span span{
+    padding-top: 5em;
+}
+
+.section_first_part .border{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: 1em;
+    border: #16285b 1px solid;
+}
+
+
+/* CONTENT 03 */
+
+.content_03{
+    padding: 0 5em;
+}
+
+.section_first_part .content_03{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.section_first_part .content_03 img{
+    width: 100%;
+}
+
+.section_first_part .content_03 .img_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.section_first_part .content_03 .separation_line{
+    height: 100%;
+    width: 1px;
+    background-color: #16285b;
+    margin: 0 3em;
+}
+
+.section_first_part .content_03 .text{
+
+}
+
+
+/*  CONTENT 04  */
+
+.content_04{
+    padding: 0 5em;
+}
+
+.section_first_part .content_04{
+    display: grid;
+    grid-template-columns: 60% auto auto;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.section_first_part .content_04 img{
+    width: 100%;
+}
+
+.section_first_part .content_04 .img_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.section_first_part .content_04 .separation_line{
+    height: 100%;
+    width: 1px;
+    background-color: #16285b;
+    margin: 0 3em;
+}
+
+.section_first_part .content_03 .text{
+
+}
+@media(max-width: 1600px){
+    .section_first_part{
+        margin: 10em 15em;
+    }
+}
+
+@media(max-width: 600px){
+    .section_first_part{
+        padding-bottom: 0;
+    }
+}
+
 @media(max-width: 1500px){
     .section_introduction{
-        padding: 0 2em;
+        padding: 0 10em;
         padding-top: 20vmax;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr auto 1fr;
+    }
+
+    .section_introduction{
+        padding-bottom: 5em;
     }
 
     .section_introduction #introduction-text{
@@ -276,8 +462,8 @@ nav li:hover{
     }
 
     .section_introduction #introduction-video iframe{
-        width: 80%;
-        height: 50%;
+        width: 300px;
+        height: 350px;
     }
 
     .vertical_bar{
@@ -290,9 +476,47 @@ nav li:hover{
         cursor: pointer;
         transform: scale(1.1);
     }
+
+    .content_01{
+        padding: 0 5em;
+    }
+
+    .section_first_part .content_01{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto auto;
+    }
+
+    .section_first_part .content_01 .separation_line{
+        height: 1px;
+        width: 100%;
+        background-color: white;
+        margin: 3em 0;
+    }
+
+    .content_02{
+        padding: 0 5em;
+    }
+
+    .section_first_part .content_02{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto auto;
+    }
+
+    .section_first_part .content_02 .separation_line{
+        height: 1px;
+        width: 100%;
+        background-color: white;
+        margin: 3em 0;
+    }
+    
 }
 
 @media (max-width: 1100px){
+    .section_first_part{
+        margin: 10em 10em;
+    }
 
     .title_div{
         color: #eeeeee;
@@ -301,9 +525,29 @@ nav li:hover{
     .section_header{
         z-index: 4;
     }
+
+    .section_introduction{
+        padding: 0 7.5em;
+        padding-top: 20vmax;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto 1fr;
+        padding-bottom: 5em;
+    }
+
+    .content_01{
+        padding: 0 7.5em;
+    }
+
+    .content_02{
+        padding: 0 7.5em;
+    }
 }
 
 @media (max-width: 920px){
+    
+    .section_first_part{
+        margin: 10em 2.5em;
+    }
 
     .title_div{
         color: #ffffff;
@@ -319,6 +563,22 @@ nav li:hover{
 
     nav{
         display: none;
+    }
+
+    .section_introduction{
+        padding: 0 2.5em;
+        padding-top: 20vmax;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto 1fr;
+        padding-bottom: 5em;
+    }
+
+    .content_01{
+        padding: 0 2.5em;
+    }
+
+    .content_02{
+        padding: 0 2.5em;
     }
 }
 
@@ -340,4 +600,18 @@ nav li:hover{
         height: 50vh;
     }
 
+    .section_introduction{
+        padding: 0 2.5em;
+        padding-top: 20vmax;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto 1fr;
+    }
+
+    .content_01{
+        padding: 0 2.5em;
+    }
+
+    .content_02{
+        padding: 0 2.5em;
+    }
 }

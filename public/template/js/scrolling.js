@@ -50,7 +50,7 @@ function updateParallax() {
 }
 
 async function LoadData(){
-    fetch('https://effet-doppler-es-2024/api/quiz')
+    fetch('https://effet-doppler-es-2024.fr/api/quiz')
     .then(response => response.json())
     .then(data => jsonData = data)
     .catch(error => console.error('Erreur lors de la récupération du quiz:', error));

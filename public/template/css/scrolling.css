@@ -963,6 +963,10 @@ footer img{
     cursor: pointer;
 }
 
+.quiz_validate_btn:disabled{
+    background-color: #3f543f;
+}
+
 .quiz_content_buttons{
     padding: 1em 2.5em;
     background-color: #16285b;

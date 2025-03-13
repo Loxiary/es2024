@@ -163,6 +163,9 @@ function ToggleQuiz(){
 }
 
 function LoadQuestion(){
+    let validateBtn = document.getElementById("quiz-validate-btn")
+    validateBtn.disabled = false;
+
     for(let i = 0; i < 4; i++){
         let button = document.getElementById(`button_0${i}`)
         button.classList.remove("chosen")

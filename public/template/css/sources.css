@@ -7,7 +7,7 @@
 
 body{
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     font-family: "Poppins", serif;
     background: rgb(85,81,186);
     background: linear-gradient(0deg, rgba(85,81,186,1) 0%, rgba(124,116,204,1) 50%, rgba(37,38,146,1) 100%);
@@ -16,7 +16,7 @@ body{
 
 nav{
     height: 6em;
-    position: absolute;
+    position: relative;
     width: 100%;
     font-weight: bold;
     z-index: 10;
@@ -69,18 +69,18 @@ span{
 main{
     height: 100%;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     color: #ffffff;
     margin: 0 3em;
+}
+
+.content{
+    margin-top: 5em;
 }
 
 #navbar-btn{
     transition: all 150ms ease-in-out;
     display: none;
-    position: absolute;
+    position: relative;
     z-index: 7;
     margin: 1em;
     height: 50px;
